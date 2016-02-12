@@ -8,7 +8,7 @@
 #include<cstdlib>
 using namespace std;
 
-int main()
+int main(int argc,int argv)
 {
     system("octave --eval \"k=int32(kronecker_generator(5,5));k=k';dlmwrite('../data/graph.txt',k);\"");
     
