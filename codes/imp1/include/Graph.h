@@ -10,17 +10,19 @@
 class Graph
 {
 private:
-    int n ; // number of nodes
     int e ; // number of edges
+    set<int> nodes;   // the list of nodes, ideally not required
     map<int,vector<int> > g;   // the adjacency list of the graph
     bool isGraph;      // is the data structure having a graph
 public:
     Graph();
-    void readGraph(String path);
-    vector<int> getEdges(int v);   // returns nodes connected to v
+    void readGraph(String path);    // The only way to initialize the graph
+    vector<int> neighbors(int v);   // returns nodes connected from v
     int cntNodes();              
     int cntEdges();
+    set<int> getNodes();
     bool isConnected(int i,int j);   // if there is a path from i to j
+    map<int,vector<int> > getStruct();   // returns the graph structure
 };
 
 #endif 

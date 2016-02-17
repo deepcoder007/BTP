@@ -6,15 +6,34 @@
 #include<sstream>
 using namespace std;
 
-
-
-int main(int argc,char** argv)
+class A
 {
-    int i=0,j=0,k=0;
-    for(i=0;i<32;i++)
+private:
+    int a;
+public:
+    void printA()
     {
-        j=(1<<i);
-        cout<<j<<endl;
+        cout<<"A is : "<<a<<endl;
     }
+    void setA(int i)
+    {
+        a = i;
+    }
+    A getClone()
+    {
+        A b ;
+        b.a = a;
+        return b;
+    }
+};
+
+int main()
+{
+    A a;
+    a.setA(100);
+    A b = a.getClone();
+    a.printA();
+    b.printA();
     return 0;
 }
+

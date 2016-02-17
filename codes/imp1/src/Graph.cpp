@@ -1,4 +1,4 @@
-#include"graph.h"
+#include"Graph.h"
 #include<algorithm>
 
 // To split the string according to the delimiter
@@ -39,11 +39,13 @@ void Graph::readGraph(String path)
         if( g.find[a] == g.end() )
             g[a] = vector<int>();
         g[a].push_back(b); 
+        nodes.insert(a);
+        nodes.insert(b);
     }
 }
 
 // Returns the list of  edges for the particular graph
-vector<int> Graph::getEdges(int v)
+vector<int> Graph::neighbors(int v)
 {
     if( isGraph == true && g.find(v)!=g.end() )
         return g[v];
@@ -55,7 +57,7 @@ vector<int> Graph::getEdges(int v)
 int Graph::cntNodes()
 {
     if( isGraph == true )
-        return n;
+        return nodes.size();
     else
         return -1;   // Invalid count
 }
@@ -69,6 +71,12 @@ int Graph::cntEdges()
         return -1;      // Invalid count
 }
 
+// Get the list of all the nodes , ideally not required
+set<int> Graph::getNodes()
+{
+    return nodes;
+}
+
 // If there is a directed path from i to j
 bool Graph::isConnected(int i,int j)
 {
@@ -76,4 +84,10 @@ bool Graph::isConnected(int i,int j)
         return false;
     else
         return true;
+}
+
+// Returns the structure of the graph
+map<int,vector<int> > Graph::getStruct()
+{
+    return g;
 }

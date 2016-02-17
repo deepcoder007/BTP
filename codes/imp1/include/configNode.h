@@ -1,37 +1,40 @@
 #ifndef CONFIG_NODE
 #define CONFIG_NODE
+#include"Graph.h"
+#include"constants.h"
+
+enum edgeType{NONE,INTERNAL,EXTERNAL};
+
+class configNodeStorage;    // Class declared because used here in configNode
 
 /* 
-    A class for operations on the higher order graph
+    Class for the configuration node
 */
 class configNode 
 {
 private:
-    long key;  // generated key of this config node
-    int k;     // the number of vacant spots
-    int v;     // the node with the robot, also to find the partition
-    int n;     // the number of total nodes in the connfiguration
-    int* vacant;  // an bitset array to hold the vacancy of the robots
+    int vacant_length; // length of the array vacant
+    int* vacant; 
+    int roboPos;
+    Graph* g_ptr;      // The pointer to the original graph
 public:
-    configNode(int ky); 
-    int getRobotPos();
+    configNode(Graph* g);     // initialize the confignode acc. to this graph
+    int getRobotPos();        // also tells the partition of the robot
     void setRobotPos(int pos);    // set the robot at this position 
-    void setTotalNodes(int cnt);
-    void setVacant(int pos);       // mark the position vacant
-    void unsetVacant(int pos);      // unset the vacancy 
-}
+    void setVacant(int pos);      // mark the position vacant
+    void unsetVacant(int pos);    // unset the vacancy 
+    bool isVacant(int pos);       // returns the vacancy status
+    int cntVacant();              // Returns the number of vacant nodes,also tells the layer in which the current node is  
 
-
-class configNodeFactory
-{
-private:
-    int n;          // the number of nodes
-    int nxtKey=0;
-public:
-    configNodeFactory(int cnt);
-    int getNxtKey();
-    int* getNextStorage();
-    configNode* get
+    // Edit configuration -> returns a new configuration after this operation
+    // When move is not possible , returns a NULL
+    configNode* getClone();                     // returns the clone 
+    configNode* robotMove(int pos1,int pos2);   // moves the robot  
+    configNode* obsMove(int post1,int pos2);    // moves the obstacle
+    
+    // CAUTION: performance critical routine(s)
+    bool unCacheMe()               // useful in case of rouge nodes
+};
 
 
 
