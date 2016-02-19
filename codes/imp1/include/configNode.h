@@ -1,5 +1,6 @@
 #ifndef CONFIG_NODE
 #define CONFIG_NODE
+#include<string>
 #include"Graph.h"
 #include"constants.h"
 
@@ -31,9 +32,14 @@ public:
     configNode* getClone();                     // returns the clone 
     configNode* robotMove(int pos1,int pos2);   // moves the robot  
     configNode* obsMove(int post1,int pos2);    // moves the obstacle
+
+    // For data transfer and caching purpose
+    string getCode();             // Returns a unique string key for config
+    bool setCode(string conf);    // Set the configuration acc. to key
     
     // CAUTION: performance critical routine(s)
     bool unCacheMe()               // useful in case of rouge nodes
+
 };
 
 
