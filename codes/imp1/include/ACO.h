@@ -1,0 +1,4 @@
+/*
+    This header file will define the classes for successful calculation over the configuration graphs
+    Various variants of ACO will be defined here
+*/

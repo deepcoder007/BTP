@@ -4,36 +4,32 @@
 #include<fstream>
 #include<vector>
 #include<sstream>
+#include<utility>
 using namespace std;
 
 class A
 {
-private:
-    int a;
+public: 
+    virtual void f()
+    { cout<<"function f() inside A "<<endl; }
+};
+
+class B : public A
+{
 public:
-    void printA()
-    {
-        cout<<"A is : "<<a<<endl;
-    }
-    void setA(int i)
-    {
-        a = i;
-    }
-    A getClone()
-    {
-        A b ;
-        b.a = a;
-        return b;
-    }
+    void f()
+    {   cout<<"function f() inside B "<<endl;  }
+    void g()
+    {   cout<<"function g() inside B "<<endl; }
 };
 
 int main()
 {
-    A a;
-    a.setA(100);
-    A b = a.getClone();
-    a.printA();
-    b.printA();
-    return 0;
+    A* a = new A;
+    a->f();
+    delete a;
+    a = new B;
+    a->f();
+    ((B*)a)->g();
 }
 

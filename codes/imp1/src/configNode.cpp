@@ -1,9 +1,19 @@
 // Implements the configNode Structure
 #include"configNode.h"
 #include<cstring>
+#include<cstdlib>
+
+// The invalid constructor of the base class
+configNode::configNode(Graph* g,int rPos,vector<int> vPos)
+{
+    cerr<<"[configNode] : This object should not be initialized "<<endl;
+    exit(-1);
+}
 
 // The constructor, non-trivial 
-configNode::configNode(Graph* g)
+// NOTE: This constructor should only be called by [configNodeStorage]
+// TODO: rewrite this function
+configNodeNaive::configNodeNaive(Graph* g,int rPos,vector<int> vPos)
 {
     vacant_length = g->cntNodes()/INT_BIT_SZ + 1;
     vacant = new int[vacant_length];
@@ -12,22 +22,22 @@ configNode::configNode(Graph* g)
     roboPos = -1;   // initially an invalid value for safety
 }
 
+// For permanently removing the configNode
+configNodeNaive::~configNodeNaive()
+{
+    g_ptr = 0;
+    delete[] vacant;
+}
+
+
 // Returns the position of the robot
-int configNode::getRobotPos()
+int configNodeNaive::getRobotPos()
 {
     return roboPos;
 }
 
-// Set the position of the robot
-// CAUTION: danger, use this routine with care
-void configNode::setRobotPos(int pos)
-{
-    setVacant(pos);    // at any cost it should be vacany
-    roboPos = pos;
-}
-
 // Set the node vacant
-void configNode::setVacant(int pos)
+void configNodeNaive::setVacant(int pos)
 {
     int i = pos/INT_BIT_SZ;
     int j = pos%INT_BIT_SZ;
@@ -37,7 +47,7 @@ void configNode::setVacant(int pos)
 }
 
 // Mark the position filled
-void configNode::unsetVacant(int pos)
+void configNodeNaive::unsetVacant(int pos)
 {
     int i = pos/INT_BIT_SZ;
     int j = pos%INT_BIT_SZ;
@@ -47,13 +57,13 @@ void configNode::unsetVacant(int pos)
 }
 
 // Check if the node is vacant
-bool configNode::isVacant(int pos)
+bool configNodeNaive::isVacant(int pos)
 {
-    return (vacant[pos/INT_BIT_SZ] & (1<<j) );
+    return (vacant[pos/INT_BIT_SZ] & (1<<(pos%INT_BIT_SZ)) );
 }
 
 // Returns the number of vacant nodes excluding that occupying the robot
-int configNode::cntVacant()
+int configNodeNaive::cntVacant()
 {
     int cnt = 0;
     int i,j;
@@ -65,7 +75,8 @@ int configNode::cntVacant()
 }
 
 // Returns the clone of the current node-> used for movement operation
-configNode* configNode::getClone()
+// TODO : The method is still not complete, REDO it
+configNode* configNodeNaive::getClone()
 {
     configNode* store = configNodeStorage::newConfigNode();
     store->vacant_length = vacant_length;
@@ -75,7 +86,7 @@ configNode* configNode::getClone()
 }
 
 // Move the robot from one pos to another
-configNode* configNode::robotMove(int pos1,int pos2)
+configNode* configNodeNaive::robotMove(int pos1,int pos2)
 {
     if( g_ptr->isConnected(pos1,pos2) && isVacant(pos2) ) {
         configNode* store = getClone();   // returns the clone of curr node
@@ -87,7 +98,7 @@ configNode* configNode::robotMove(int pos1,int pos2)
 }
 
 // Move the obstacle from one pos to other
-configNode* configNode::obsMove(int pos1,int pos2)
+configNode* configNodeNaive::obsMove(int pos1,int pos2)
 {
     if( g_ptr->isConnected(pos1,pos2) && isVacant(pos2) {
         configNode* store = getClone();
@@ -99,6 +110,16 @@ configNode* configNode::obsMove(int pos1,int pos2)
     }
 }
 
+// Returns the 2D key of the current node
+key_ii configNodeNaive::getCode()
+{
+    return key_ii(roboPos % 10, cntVacant % 100 );
+}
+
+bool configNodeNaive::unCacheMe()
+{
+
+}
 
 
 
