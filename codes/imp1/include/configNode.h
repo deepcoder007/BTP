@@ -47,8 +47,9 @@ private:
     int roboPos;
     Graph* g_ptr;      // The pointer to the original graph
     keyii key;         // The key of this configuration
+    int vacCnt;
 public:
-    configNodeNaive(Graph* g,int rPos,vector<int> vPos);     // initialize the confignode acc. to this graph
+    configNodeNaive(Graph* g,int rPos,vector<int> vPos);     // initialize the confignode acc. to this graph -> should only be used by storage object
     ~configNodeNaive();
     bool isGPU();
     int getRobotPos();        // also tells the partition of the robot
@@ -66,4 +67,4 @@ public:
 // TODO: Algo design the GPU version of the configNode to make the other operations GPU-to-GPU
 
 
-
+#endif

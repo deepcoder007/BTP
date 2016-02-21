@@ -132,7 +132,7 @@ bool linkListIterator::isGPU()
     return false;
 }
 
-bool linkListIterator::hadNext()
+bool linkListIterator::hasNext()
 {
     if( lst->_getHead()->next == head )  
         return false;

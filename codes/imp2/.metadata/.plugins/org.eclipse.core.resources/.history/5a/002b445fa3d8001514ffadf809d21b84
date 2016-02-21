@@ -1,0 +1,130 @@
+/*
+ * configNode.cpp
+ *
+ *  Created on: 21-Feb-2016
+ *      Author: vibhanshu
+ */
+// Implements the configNode Structure
+#include"configNode.h"
+#include<cstring>
+#include<cstdlib>
+
+// The invalid constructor of the base class
+configNode::configNode(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
+{
+    cerr<<"[configNode] : This object should not be initialized "<<endl;
+    exit(-1);
+}
+
+// The constructor, non-trivial
+// NOTE: This constructor should only be called by [configNodeStorage]
+// TODO: rewrite this function
+// NOTE: passed the storage structure also where this node will init
+configNodeNaive::configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
+{
+    vacant_length = g->cntNodes()/INT_BIT_SZ + 1;
+    vacant = new int[vacant_length];
+    vacCnt = vLen;
+    roboPos = rPos;
+    g_ptr = g;
+    key.first= rPos % HASH_KEY1_SZ;
+    key.second = 0;
+    for( int i = 0 ; i<vacant_length ; i++ )    // 0 means an obstacle
+        vacant[i]=0;    // mark everything occupied
+    register int i,j,k;
+
+    // The  position of the robot is also vacant
+    i = rPos/INT_BIT_SZ;
+    j = rPos%INT_BIT_SZ;
+    vacant[i] += (1<<j);
+
+    for( k=0 ; k<vLen ; k++ )
+    {
+        i = vPos[k]/INT_BIT_SZ;
+        j = vPos[k]%INT_BIT_SZ;
+        vacant[i] += (1<<j);
+        key.second += vPos[k];
+    }
+    key.second %= HASH_KEY2_SZ;
+    storage = stor;
+}
+
+// For permanently removing the configNode
+configNodeNaive::~configNodeNaive()
+{
+    g_ptr = NULL;
+    delete[] vacant;
+}
+
+bool configNodeNaive::isGPU() {
+	return false;
+}
+
+// Returns the position of the robot
+int configNodeNaive::getRobotPos()
+{
+    return roboPos;
+}
+
+// Check if the node is vacant
+bool configNodeNaive::isVacant(int pos)
+{
+    return (vacant[pos/INT_BIT_SZ] & (1<<(pos%INT_BIT_SZ)) );
+}
+
+// Returns the number of vacant nodes excluding that occupying the robot
+int configNodeNaive::cntVacant()
+{
+    return vacCnt;
+}
+
+// Returns the number of nodes in the underlying graph
+int configNodeNaive::cntNodes() {
+	return g_ptr->cntNodes();
+}
+
+// Move the robot from one pos to another
+// TODO: Redo this function
+configNode* configNodeNaive::robotMove(int pos1,int pos2)
+{
+    if( g_ptr->isConnected(pos1,pos2) && isVacant(pos2) ) {
+    	int* tmpArr=new int[vacant_length];
+
+
+    	configNode* tmpNode = storage->getConfigNode(g_ptr,)
+		return tmpNode;
+    } else {
+        return NULL;
+    }
+}
+
+// Move the obstacle from one pos to other
+// TODO: Redo this function
+configNode* configNodeNaive::obsMove(int pos1,int pos2)
+{
+    if( g_ptr->isConnected(pos1,pos2) && isVacant(pos2) {
+
+    	// Write here
+
+    } else {
+        return NULL;
+    }
+}
+
+// Returns the 2D key of the current node
+key_ii configNodeNaive::getCode()
+{
+	return this->key;
+}
+
+bool configNodeNaive::unCacheMe()
+{
+
+}
+
+
+
+
+
+
+

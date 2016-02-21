@@ -13,13 +13,27 @@ configNode::configNode(Graph* g,int rPos,vector<int> vPos)
 // The constructor, non-trivial 
 // NOTE: This constructor should only be called by [configNodeStorage]
 // TODO: rewrite this function
+// NOTE: passed the storage structure also where this node will init
 configNodeNaive::configNodeNaive(Graph* g,int rPos,vector<int> vPos)
 {
     vacant_length = g->cntNodes()/INT_BIT_SZ + 1;
     vacant = new int[vacant_length];
+    vacCnt = vPos.size();
     for( i = 0 ; i<vacant_length ; i++ )    // 0 means an obstacle
-        vacant[i]=0;   
-    roboPos = -1;   // initially an invalid value for safety
+        vacant[i]=0;    // mark everything occupied
+    register int i,j,k;
+
+    // The  position of the robot is also vacant 
+    i = rPos/INT_BIT_SZ;
+    j = rPos%INT_BIT_SZ;
+    vacant[i] += (1<<j);
+
+    for( k=0 ; k<vPos.size() ; k++ )
+    {
+        i = vPos[k]/INT_BIT_SZ;
+        j = vPos[k]%INT_BIT_SZ;
+        vacant[i] += (1<<j)
+    }
 }
 
 // For permanently removing the configNode
@@ -36,26 +50,6 @@ int configNodeNaive::getRobotPos()
     return roboPos;
 }
 
-// Set the node vacant
-void configNodeNaive::setVacant(int pos)
-{
-    int i = pos/INT_BIT_SZ;
-    int j = pos%INT_BIT_SZ;
-
-    if( (vacant[i] & (1<<j) == 0 ) 
-        vacant[i] = ( vacant[i] | (1<<j) );
-}
-
-// Mark the position filled
-void configNodeNaive::unsetVacant(int pos)
-{
-    int i = pos/INT_BIT_SZ;
-    int j = pos%INT_BIT_SZ;
-
-    if( (vacant[i] & (1<<j) != 0 )
-        vacant[i] = ( vacant[i] & ~(1<<j) );
-}
-
 // Check if the node is vacant
 bool configNodeNaive::isVacant(int pos)
 {
@@ -65,13 +59,7 @@ bool configNodeNaive::isVacant(int pos)
 // Returns the number of vacant nodes excluding that occupying the robot
 int configNodeNaive::cntVacant()
 {
-    int cnt = 0;
-    int i,j;
-    for( i=0 ; i<vacant_length ; i++ )
-        for( j=0; j<INT_BIT_SZ ; j++ )
-            if( (vacant[i] & (1<<j)) )
-                cnt++;
-    return cnt;
+    return vacCnt;
 }
 
 // Returns the clone of the current node-> used for movement operation
@@ -113,7 +101,7 @@ configNode* configNodeNaive::obsMove(int pos1,int pos2)
 // Returns the 2D key of the current node
 key_ii configNodeNaive::getCode()
 {
-    return key_ii(roboPos % 10, cntVacant % 100 );
+    return key_ii(roboPos % HASH_KEY1_SZ, cntVacant % HASH_KEY2_SZ );
 }
 
 bool configNodeNaive::unCacheMe()

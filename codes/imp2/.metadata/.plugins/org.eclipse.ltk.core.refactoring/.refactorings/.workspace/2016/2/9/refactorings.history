@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;graph_aco/data/src&apos;" deleteContents="false" description="Delete resource &apos;graph_aco/data/src&apos;" element1="/graph_aco/data/src" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1456043148440"/>&#x0A;<refactoring comment="Delete resource &apos;graph_aco/include/commons.cpp&apos;" deleteContents="false" description="Delete resource &apos;graph_aco/include/commons.cpp&apos;" element1="/graph_aco/include/commons.cpp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1456045976028"/>
+</session>

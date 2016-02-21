@@ -1,0 +1,18 @@
+14:21:33 **** Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+../src/Graph.cpp: In constructor ‘Graph::Graph()’:
+../src/Graph.cpp:16:4: error: ‘n’ was not declared in this scope
+    n=0;
+    ^
+../src/Graph.cpp: At global scope:
+../src/Graph.cpp:21:23: error: variable or field ‘readGraph’ declared void
+ void Graph::readGraph(String path)
+                       ^
+../src/Graph.cpp:21:23: error: ‘String’ was not declared in this scope
+make: *** [src/Graph.o] Error 1
+
+14:21:34 Build Finished (took 567ms)
+

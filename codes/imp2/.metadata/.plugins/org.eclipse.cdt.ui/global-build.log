@@ -1,0 +1,49 @@
+14:22:03 **** Incremental Build of configuration Debug for project tmp_proj ****
+make all 
+Building file: ../src/first.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/first.d" -MT"src/first.o" -o "src/first.o" "../src/first.cpp"
+Finished building: ../src/first.cpp
+ 
+Building target: tmp_proj
+Invoking: Cross G++ Linker
+g++  -o "tmp_proj"  ./src/first.o   
+Finished building target: tmp_proj
+ 
+14:22:12 **** Incremental Build of configuration Debug for project tmp_proj ****
+make all 
+make: Nothing to be done for `all'.
+14:23:52 **** Incremental Build of configuration Debug for project tmp_proj ****
+make all 
+Building file: ../src/first.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/tmp_proj/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/first.d" -MT"src/first.o" -o "src/first.o" "../src/first.cpp"
+Finished building: ../src/first.cpp
+ 
+Building target: tmp_proj
+Invoking: Cross G++ Linker
+g++  -o "tmp_proj"  ./src/first.o   
+Finished building target: tmp_proj
+ 
+14:23:58 **** Incremental Build of configuration Debug for project tmp_proj ****
+make all 
+Building file: ../src/first.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/tmp_proj/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/first.d" -MT"src/first.o" -o "src/first.o" "../src/first.cpp"
+../src/first.cpp:9:19: fatal error: fsirst.h: No such file or directory
+ #include"fsirst.h"
+                   ^
+compilation terminated.
+make: *** [src/first.o] Error 1
+14:24:07 **** Incremental Build of configuration Debug for project tmp_proj ****
+make all 
+Building file: ../src/first.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/tmp_proj/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/first.d" -MT"src/first.o" -o "src/first.o" "../src/first.cpp"
+Finished building: ../src/first.cpp
+ 
+Building target: tmp_proj
+Invoking: Cross G++ Linker
+g++  -o "tmp_proj"  ./src/first.o   
+Finished building target: tmp_proj
+ 

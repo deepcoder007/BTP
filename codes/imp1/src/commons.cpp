@@ -1,6 +1,7 @@
 /*
     Implementation of the common functions
 */
+#include"commons.h"
 #include<algorithm>
 
 vector<string> split(string str, char delimiter) {
