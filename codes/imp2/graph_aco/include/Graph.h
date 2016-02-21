@@ -12,6 +12,9 @@
 #include<set>
 #include<map>
 #include<string>
+#include<cstring>
+#include"commons.h"
+#include"constants.h"
 using namespace std;
 
 
@@ -41,8 +44,6 @@ public:
 };
 
 // TODO: Make the GPU version of this graph, this will make other computations GPU-to-GPU
-
-
 
 
 #endif /* GRAPH_H_ */

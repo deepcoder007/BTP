@@ -1,49 +1,167 @@
-14:22:03 **** Incremental Build of configuration Debug for project tmp_proj ****
+21:58:22 **** Incremental Build of configuration Debug for project graph_aco ****
 make all 
-Building file: ../src/first.cpp
+Building file: ../src/Graph.cpp
 Invoking: Cross G++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/first.d" -MT"src/first.o" -o "src/first.o" "../src/first.cpp"
-Finished building: ../src/first.cpp
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+Finished building: ../src/Graph.cpp
  
-Building target: tmp_proj
-Invoking: Cross G++ Linker
-g++  -o "tmp_proj"  ./src/first.o   
-Finished building target: tmp_proj
- 
-14:22:12 **** Incremental Build of configuration Debug for project tmp_proj ****
-make all 
-make: Nothing to be done for `all'.
-14:23:52 **** Incremental Build of configuration Debug for project tmp_proj ****
-make all 
-Building file: ../src/first.cpp
+Building file: ../src/commons.cpp
 Invoking: Cross G++ Compiler
-g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/tmp_proj/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/first.d" -MT"src/first.o" -o "src/first.o" "../src/first.cpp"
-Finished building: ../src/first.cpp
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/commons.d" -MT"src/commons.o" -o "src/commons.o" "../src/commons.cpp"
+Finished building: ../src/commons.cpp
  
-Building target: tmp_proj
-Invoking: Cross G++ Linker
-g++  -o "tmp_proj"  ./src/first.o   
-Finished building target: tmp_proj
- 
-14:23:58 **** Incremental Build of configuration Debug for project tmp_proj ****
-make all 
-Building file: ../src/first.cpp
+Building file: ../src/configNode.cpp
 Invoking: Cross G++ Compiler
-g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/tmp_proj/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/first.d" -MT"src/first.o" -o "src/first.o" "../src/first.cpp"
-../src/first.cpp:9:19: fatal error: fsirst.h: No such file or directory
- #include"fsirst.h"
-                   ^
-compilation terminated.
-make: *** [src/first.o] Error 1
-14:24:07 **** Incremental Build of configuration Debug for project tmp_proj ****
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
+../src/configNode.cpp:20:1: warning: unused parameter ‘g’ [-Wunused-parameter]
+ configNode::configNode(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
+ ^
+../src/configNode.cpp:20:1: warning: unused parameter ‘rPos’ [-Wunused-parameter]
+../src/configNode.cpp:20:1: warning: unused parameter ‘vLen’ [-Wunused-parameter]
+../src/configNode.cpp:20:1: warning: unused parameter ‘vPos’ [-Wunused-parameter]
+../src/configNode.cpp:20:1: warning: unused parameter ‘stor’ [-Wunused-parameter]
+../src/configNode.cpp: In constructor ‘configNodeNaive::configNodeNaive(Graph*, int, int, int*, configNodeStorage*)’:
+../src/configNode.cpp:34:94: error: no matching function for call to ‘configNode::configNode()’
+ configNodeNaive::configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
+                                                                                              ^
+../src/configNode.cpp:34:94: note: candidates are:
+../src/configNode.cpp:20:1: note: configNode::configNode(Graph*, int, int, int*, configNodeStorage*)
+ configNode::configNode(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
+ ^
+../src/configNode.cpp:20:1: note:   candidate expects 5 arguments, 0 provided
+In file included from ../src/configNode.cpp:8:0:
+/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/configNode.h:15:7: note: configNode::configNode(const configNode&)
+ class configNode
+       ^
+/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/configNode.h:15:7: note:   candidate expects 1 argument, 0 provided
+../src/configNode.cpp: At global scope:
+../src/configNode.cpp:34:1: warning: unused parameter ‘vPos’ [-Wunused-parameter]
+ configNodeNaive::configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
+ ^
+../src/configNode.cpp: In member function ‘configNode* configNodeNaive::robotMove(int)’:
+../src/configNode.cpp:102:35: error: invalid use of incomplete type ‘class configNodeStorage’
+      configNode* tmpNode = storage->getConfigNode(g_ptr,pos2,vacant_length,vacant);
+                                   ^
+In file included from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/Graph.h:16:0,
+                 from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/configNode.h:5,
+                 from ../src/configNode.cpp:8:
+/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:16:7: error: forward declaration of ‘class configNodeStorage’
+ class configNodeStorage;
+       ^
+../src/configNode.cpp: In member function ‘virtual configNode* configNodeNaive::obsMove(int, int)’:
+../src/configNode.cpp:130:35: error: invalid use of incomplete type ‘class configNodeStorage’
+      configNode* tmpNode = storage->getConfigNode(g_ptr,roboPos,vacant_length,tmpArr);
+                                   ^
+In file included from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/Graph.h:16:0,
+                 from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/configNode.h:5,
+                 from ../src/configNode.cpp:8:
+/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:16:7: error: forward declaration of ‘class configNodeStorage’
+ class configNodeStorage;
+       ^
+make: *** [src/configNode.o] Error 1
+22:00:11 **** Incremental Build of configuration Debug for project graph_aco ****
 make all 
-Building file: ../src/first.cpp
+Building file: ../src/configNode.cpp
 Invoking: Cross G++ Compiler
-g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/tmp_proj/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/first.d" -MT"src/first.o" -o "src/first.o" "../src/first.cpp"
-Finished building: ../src/first.cpp
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
+../src/configNode.cpp:20:1: warning: unused parameter ‘g’ [-Wunused-parameter]
+ configNode::configNode(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
+ ^
+../src/configNode.cpp:20:1: warning: unused parameter ‘rPos’ [-Wunused-parameter]
+../src/configNode.cpp:20:1: warning: unused parameter ‘vLen’ [-Wunused-parameter]
+../src/configNode.cpp:20:1: warning: unused parameter ‘vPos’ [-Wunused-parameter]
+../src/configNode.cpp:20:1: warning: unused parameter ‘stor’ [-Wunused-parameter]
+../src/configNode.cpp: In member function ‘configNode* configNodeNaive::robotMove(int)’:
+../src/configNode.cpp:102:35: error: invalid use of incomplete type ‘class configNodeStorage’
+      configNode* tmpNode = storage->getConfigNode(g_ptr,pos2,vacant_length,vacant);
+                                   ^
+In file included from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/Graph.h:16:0,
+                 from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/configNode.h:5,
+                 from ../src/configNode.cpp:8:
+/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:16:7: error: forward declaration of ‘class configNodeStorage’
+ class configNodeStorage;
+       ^
+../src/configNode.cpp: In member function ‘virtual configNode* configNodeNaive::obsMove(int, int)’:
+../src/configNode.cpp:130:35: error: invalid use of incomplete type ‘class configNodeStorage’
+      configNode* tmpNode = storage->getConfigNode(g_ptr,roboPos,vacant_length,tmpArr);
+                                   ^
+In file included from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/Graph.h:16:0,
+                 from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/configNode.h:5,
+                 from ../src/configNode.cpp:8:
+/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:16:7: error: forward declaration of ‘class configNodeStorage’
+ class configNodeStorage;
+       ^
+make: *** [src/configNode.o] Error 1
+22:05:44 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+Finished building: ../src/Graph.cpp
  
-Building target: tmp_proj
-Invoking: Cross G++ Linker
-g++  -o "tmp_proj"  ./src/first.o   
-Finished building target: tmp_proj
- 
+Building file: ../src/configNode.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
+../src/configNode.cpp:20:1: warning: unused parameter ‘g’ [-Wunused-parameter]
+ configNode::configNode(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
+ ^
+../src/configNode.cpp:20:1: warning: unused parameter ‘rPos’ [-Wunused-parameter]
+../src/configNode.cpp:20:1: warning: unused parameter ‘vLen’ [-Wunused-parameter]
+../src/configNode.cpp:20:1: warning: unused parameter ‘vPos’ [-Wunused-parameter]
+../src/configNode.cpp:20:1: warning: unused parameter ‘stor’ [-Wunused-parameter]
+../src/configNode.cpp: In member function ‘virtual int configNodeNaive::cntNodes()’:
+../src/configNode.cpp:88:14: error: invalid use of incomplete type ‘class Graph’
+  return g_ptr->cntNodes();
+              ^
+In file included from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/configNode.h:6:0,
+                 from ../src/configNode.cpp:8:
+/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:18:7: error: forward declaration of ‘class Graph’
+ class Graph;
+       ^
+../src/configNode.cpp: In member function ‘configNode* configNodeNaive::robotMove(int)’:
+../src/configNode.cpp:99:14: error: invalid use of incomplete type ‘class Graph’
+     if( g_ptr->isConnected(roboPos,pos2) && isVacant(pos2) ) {
+              ^
+In file included from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/configNode.h:6:0,
+                 from ../src/configNode.cpp:8:
+/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:18:7: error: forward declaration of ‘class Graph’
+ class Graph;
+       ^
+../src/configNode.cpp:102:35: error: invalid use of incomplete type ‘class configNodeStorage’
+      configNode* tmpNode = storage->getConfigNode(g_ptr,pos2,vacant_length,vacant);
+                                   ^
+In file included from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/configNode.h:6:0,
+                 from ../src/configNode.cpp:8:
+/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:16:7: error: forward declaration of ‘class configNodeStorage’
+ class configNodeStorage;
+       ^
+../src/configNode.cpp: In member function ‘virtual configNode* configNodeNaive::obsMove(int, int)’:
+../src/configNode.cpp:118:14: error: invalid use of incomplete type ‘class Graph’
+     if( g_ptr->isConnected(pos1,pos2) &&
+              ^
+In file included from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/configNode.h:6:0,
+                 from ../src/configNode.cpp:8:
+/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:18:7: error: forward declaration of ‘class Graph’
+ class Graph;
+       ^
+../src/configNode.cpp:130:35: error: invalid use of incomplete type ‘class configNodeStorage’
+      configNode* tmpNode = storage->getConfigNode(g_ptr,roboPos,vacant_length,tmpArr);
+                                   ^
+In file included from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/configNode.h:6:0,
+                 from ../src/configNode.cpp:8:
+/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:16:7: error: forward declaration of ‘class configNodeStorage’
+ class configNodeStorage;
+       ^
+../src/configNode.cpp: In member function ‘virtual int configNodeNaive::cntNodes()’:
+../src/configNode.cpp:89:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/configNode.cpp: In member function ‘configNode* configNodeNaive::robotMove(int)’:
+../src/configNode.cpp:108:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/configNode.cpp: In member function ‘virtual configNode* configNodeNaive::obsMove(int, int)’:
+../src/configNode.cpp:136:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/configNode.o] Error 1

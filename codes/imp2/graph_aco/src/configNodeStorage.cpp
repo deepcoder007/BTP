@@ -97,56 +97,15 @@ configNode* configNodeStorageNaive::getConfigNode(Graph* g,int rPos,int len,int*
     return tmpNode;  // return the newly initialized node
 }
 
-// The array version of the getConfigNode , vectors are slow
-configNode* configNodeStorageNaive::getConfigNode(Graph*g,int rPos,int len,int* vPos)
-{
-	// First search if such a configuration exist
-	key_ii key;
-
-    int vPosSum = 0;
-    int i,sz=vPos.size();
-    for( i=0 ; i<sz ; i++ )
-        vPosSum += vPos[i];
-
-    key_ii key(rPos%HASH_KEY1_SZ,vPosSum%HASH_KEY2_SZ);
-    linkListIterator tmpList(dt[key.first][key.second]);  // initialize
-    configNode* tmpNode;
-    bool flag;    // for testing the similarity
-    while( tmpList.hasNext() )
-    {
-        flag = false;       // if true , then dissimilar
-        tmpNode = tmpList.next();
-        // now check if tmpNode is having the same conf
-        if( rPos !=  tmpNode->getRobotPos() )
-            flag = true;
-        else if ( vPos.size() != tmpNode->cntVacant() )
-            flag = true;
-        else {
-            for( i = 0 ; i<vPos.size() ; i++ )
-                if ( tmpNode->isVacant(vPos[i]) == false )
-                {
-                	flag = true;
-                	break;
-                }
-        }
-        if( flag == false )    // i.e. node found
-            return tmpNode;
-    }
-
-    // new Node needs to be initialized and update the hash DS
-    tmpNode = (configNode*)(new configNodeNaive(g,rPos,vPos,this));
-    dt[key.first][key.second]->insertNode(tmpNode) ;
-    return tmpNode;  // return the newly initialized node
-
-
-}
-
+/*
+ * Deletes the configNode corresponding to the ptr
+ */
 bool configNodeStorageNaive::deleteConfigNode(configNode* ptr)
 {
 	// first calculate the key for (*ptr)
 	key_ii key;
 	key.first = (ptr->getRobotPos() % HASH_KEY1_SZ);
-	int n=this->graph->cntNodes();
+	int n = ptr->cntNodes();
 
 	// TODO: Edit code below
 	int tmp=0;			// A temporary variable
@@ -170,22 +129,25 @@ bool configNodeStorageNaive::deleteConfigNode(configNode* ptr)
 	    else if ( ptr->cntVacant() != tmpNode->cntVacant() )
 	        flag = true;
 	    else {
-	    	int n = ptr->cntNodes();
-	        for( i = 1 ; i<n ; i++ )
-	        	if( tmpNode->isVacant(i) == ptr->isVacant(i)  )
-
-
-	        // TODO: Remove code below this line
-	    	for( i = 0 ; i<vPos.size() ; i++ )
-	        	if ( tmpNode->isVacant(vPos[i]) == false )
-	            {
-	              	flag = true;
-	               	break;
-	            }
+	        for( int i = 1 ; i<n ; i++ )
+	        	if( tmpNode->isVacant(i) != ptr->isVacant(i) ) {
+	        		flag=true;
+	        		break;
+	        	}
 	    }
 	    if( flag == false )    // i.e. node found
-	    	return tmpNode;
+	    {
+	    	// Delete the tmpNode
+	    	dt[key.first][key.second]->deleteNode(tmpNode);
+	    	// This will be a constant time operation because due
+	    	// to iterators, this node is already at head.
+	    	return true;
+	    }
 	}
+	return false;  // i.e. no such node exist
+}
 
-
-
+configNodeIterator* configNodeStorageNaive::getNodesByKey(key_ii key)
+{
+	return new linkListIterator(dt[key.first][key.second]);  // initialize
+}

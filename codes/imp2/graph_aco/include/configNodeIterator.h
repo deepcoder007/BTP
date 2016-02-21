@@ -8,6 +8,9 @@
 #ifndef CONFIGNODEITERATOR_H_
 #define CONFIGNODEITERATOR_H_
 
+#include"constants.h"
+#include"commons.h"
+
 //  An interface for list used in the program
 class List
 {

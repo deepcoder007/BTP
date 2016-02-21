@@ -11,6 +11,7 @@
 #include"configNode.h"  // for the configNode data structure
 #include<vector>
 
+/*
 class configGraph
 {
 private:
@@ -23,5 +24,5 @@ public:
 
 
 };
-
+*/
 #endif /* CONFIGGRAPH_H_ */

@@ -6,7 +6,7 @@
  */
 
 // Implementation  of the config node Iterators
-#include"configNodeItearator.h"
+#include"configNodeIterator.h"
 #include<iostream>
 using namespace std;
 
@@ -62,7 +62,7 @@ void linkList::insertNode(configNode* data)
 {
     if( head == NULL ) {
         head = new Node;
-        Node->info = data;
+        head->info = data;
         head->prev = head;
         head->next = head;
     } else {
@@ -99,6 +99,7 @@ bool linkList::deleteAll()
 {
     while( head != NULL )
         delete_head();
+    return true;
 }
 
 // Returns the "Node" containing the head

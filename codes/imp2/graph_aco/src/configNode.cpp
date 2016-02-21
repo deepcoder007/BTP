@@ -8,16 +8,30 @@
 #include"configNode.h"
 #include<cstring>
 #include<cstdlib>
+#include<iostream>
+#include<cstdio>
+#include<cstdlib>
+using namespace std;
 
-// The invalid constructor of the base class
+/*
+ * The constructor for the abstract class
+ * Initializing this will throw an error
+ */
 configNode::configNode(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
 {
-    cerr<<"[configNode] : This object should not be initialized "<<endl;
-    exit(-1);
+//    cout<<"[configNode] : This object should not be initialized "<<std::endl;
+//    exit(-1);
 }
 
-// The constructor, non-trivial
-configNodeNaive::configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
+/*
+ * Constructor for configNodeNaive which is CPU version
+ * ARGUMENTS:
+ * 		1. g		: The underlying graph
+ * 		2. rPos		: The position of the robot
+ * 		3. vLen		: The length of vPos array
+ * 		4. vPos		: The BITset to store the vacant positions
+ */
+configNodeNaive::configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor) : configNode(g,rPos,vLen,vPos,stor)
 {
     vacant_length = vLen;
     vacant = new int[vacant_length];
@@ -74,11 +88,15 @@ int configNodeNaive::cntNodes() {
 	return g_ptr->cntNodes();
 }
 
-// Move the robot from one pos to another
-// TODO: Redo this function
-configNode* configNodeNaive::robotMove(int pos1,int pos2)
+/*
+ * Move the robot from 'roboPos' to new position 'pos2'
+ * If this new position is not possible return NULL
+ * The allocation of space for configNode structure is done
+ * internally.
+ */
+configNode* configNodeNaive::robotMove(int pos2)
 {
-    if( g_ptr->isConnected(pos1,pos2) && isVacant(pos2) ) {
+    if( g_ptr->isConnected(roboPos,pos2) && isVacant(pos2) ) {
     	int* tmpArr=new int[vacant_length];
     	memcpy(tmpArr,vacant,sizeof(int)*vacant_length);
     	configNode* tmpNode = storage->getConfigNode(g_ptr,pos2,vacant_length,vacant);
@@ -89,13 +107,29 @@ configNode* configNodeNaive::robotMove(int pos1,int pos2)
     }
 }
 
-// Move the obstacle from one pos to other
-// TODO: Redo this function
+/*
+ * Return obstacle on 'pos1' to 'pos2'
+ * if this is not possible then return NULL
+ */
 configNode* configNodeNaive::obsMove(int pos1,int pos2)
 {
-    if( g_ptr->isConnected(pos1,pos2) && isVacant(pos2) {
-    	int
-
+	// check if (pos1->pos2) , if pos2 is vacant and pos1
+	// is filled simultaneously
+    if( g_ptr->isConnected(pos1,pos2) &&
+    		isVacant(pos2) && !isVacant(pos1) )
+    {
+    	int* tmpArr=new int[vacant_length];
+    	memcpy(tmpArr,vacant,sizeof(int)*vacant_length);
+    	int i,j;
+    	i = pos1 / INT_BIT_SZ;
+    	j = pos1 % INT_BIT_SZ;
+    	tmpArr[i] = (tmpArr[i] & ~(1<<j));
+    	i = pos2 / INT_BIT_SZ;
+    	j = pos2 % INT_BIT_SZ;
+    	tmpArr[i] = (tmpArr[i] | (1<<j));
+    	configNode* tmpNode = storage->getConfigNode(g_ptr,roboPos,vacant_length,tmpArr);
+    	delete[] tmpArr;
+    	return tmpNode;
     } else {
         return NULL;
     }
@@ -106,15 +140,3 @@ key_ii configNodeNaive::getCode()
 {
 	return this->key;
 }
-
-bool configNodeNaive::unCacheMe()
-{
-
-}
-
-
-
-
-
-
-

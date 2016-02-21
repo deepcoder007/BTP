@@ -13,6 +13,7 @@
 #include<cstdio>
 #include<cstdlib>
 #include<string>
+#include<cstring>
 using namespace std;
 
 // Init
@@ -29,20 +30,19 @@ bool Graph::isGPU()
 }
 
 // Reads and initializes the graph
-void Graph::readGraph(string path)
-{
+void Graph::readGraph(std::string path) {
     isGraph = true;
     e = 0;
     ifstream file;
-    file.open(path);
+    file.open(path.c_str());
     string line;
-    register int a,b;
+    int a,b;
     while( getline(file,line) )  // for all the lines in the file
     {
         vector<string> v = split(line,',');
         a = atoi(v[0].c_str());
         b = atoi(v[1].c_str());
-        a++ ; b++ ;
+        a++ ; b++ ;   // very important line to remove 0 nodes
         n = max( n, max(a,b) );
         e++;
         if( g.find(a) == g.end() )
@@ -89,7 +89,8 @@ set<int> Graph::getNodes()
 // If there is a directed path from i to j
 bool Graph::isConnected(int i,int j)
 {
-    if( isGraph == false || g.find(i)==g.end() || g[i].find(j)==g[i].end() )
+    if( isGraph == false || g.find(i)==g.end() ||
+			find(g[i].begin(),g[i].end(),j)==g[i].end() )
         return false;
     else
         return true;

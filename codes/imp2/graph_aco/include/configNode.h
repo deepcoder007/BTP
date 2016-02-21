@@ -1,17 +1,10 @@
 #ifndef CONFIGNODE_H
 #define CONFIGNODE_H
 
-
 #include<string>
-#include"Graph.h"
 #include"constants.h"
 #include"commons.h"
-#include"configNodeIterator.h"
 using namespace std;
-
-enum edgeType{NONE,INTERNAL,EXTERNAL};
-
-class configNodeStorage;    // Class declared because used here in configNode
 
 
 /*
@@ -35,9 +28,6 @@ public:
 
     // A key , the key is a 2D object
     virtual key_ii getCode()=0;             // Returns a unique string key for config
-
-    // CAUTION: performance critical routine(s)
-    virtual bool unCacheMe()=0;               // useful in case of rouge nodes
 };
 
 /* Serial implementation of the config node class */
@@ -59,13 +49,13 @@ public:
     int getRobotPos();        // also tells the partition of the robot
     bool isVacant(int pos);       // returns the vacancy status
     int cntVacant();              // Returns the number of vacant nodes,also tells the layer in which the current node is
-    int cntNodes();
+    int cntNodes();    // CAUTION: Assumption that nodes
+    				  // in seq [1,..,n]
 
-    configNode* robotMove(int pos1,int pos2);   // moves the robot
+    configNode* robotMove(int pos2);   // moves the robot
     configNode* obsMove(int post1,int pos2);    // moves the obstacle
 
     key_ii getCode();             // Returns a unique string key for config
-    bool unCacheMe();               // useful in case of rouge nodes
 };
 
 // TODO: Algo design the GPU version of the configNode to make the other operations GPU-to-GPU
