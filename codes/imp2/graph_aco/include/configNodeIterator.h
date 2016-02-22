@@ -51,7 +51,7 @@ public:
     bool deleteNode(configNode* data);   // Delete this node from this list, return true if successful
     bool deleteAll();                    // CAUTION: dangerous operation to perform
     Node* _getHead();                     // Returns the Node instead of the configNode
-    configNode* getHead();                // Return the node at the head
+    configNode* getHead();                // Return the configNode at the head
     void moveHead();                      // Move to the next position
 };
 
@@ -68,6 +68,12 @@ public:
     virtual void pop()=0;
 };
 
+/*
+ * TODO : Checkout the bug in hasNext() subroutine
+ * in the configNodeStorage class,
+ * when the list is empty, the node is getting
+ * inserted twice -> an edge case.
+ */
 class linkListIterator : public configNodeIterator
 {
 private:

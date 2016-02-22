@@ -34,7 +34,8 @@ public:
     virtual bool isGPU()=0;
     virtual configNode* getConfigNode(Graph* g,int rPos,int len,int* vPos)=0;
     virtual bool deleteConfigNode(configNode* ptr)=0;       // Deletes this configNode from the structure
-    virtual configNodeIterator* getNodeByKey(key_ii key)=0;
+    virtual configNodeIterator* getNodesByKey(key_ii key)=0;
+    virtual int getCount()=0;	// no. of nodes stored
 };
 
 // The serial implementation of the configNodeStorage construct
@@ -43,6 +44,7 @@ class configNodeStorageNaive: public configNodeStorage
 private:
 	Graph* graph;			// handle of the Graph
     linkList* dt[HASH_KEY1_SZ][HASH_KEY2_SZ];     // A hash to store the data
+    int count;				// Counts the number of nodes stored
 public:
     configNodeStorageNaive(Graph* g);
     ~configNodeStorageNaive();
@@ -50,6 +52,7 @@ public:
     configNode* getConfigNode(Graph* g,int rPos,int len,int* vPos); // preferably use this function
     bool deleteConfigNode(configNode* ptr);
     configNodeIterator* getNodesByKey(key_ii key); // in this case a listNodeIt.
+    int getCount();
 };
 
 // The GPU implementation of the configNodeStorage

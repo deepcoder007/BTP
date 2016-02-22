@@ -3,6 +3,7 @@
 	<name>tmp_proj</name>
 	<comment></comment>
 	<projects>
+		<project>graph_aco</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -49,12 +49,19 @@ configNodeNaive::configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNode
     g_ptr = g;
     storage = stor;
     memcpy(vacant,vPos,sizeof(int)*vacant_length);
+    // Check if the robot pos is marked vacant
+    int i,j;
+    i = rPos / INT_BIT_SZ;
+    j = rPos % INT_BIT_SZ;
+    if( (vacant[i] & (1<<j)) == 0  ) {
+    	cout<<"[ERROR]: position of robot must be vacant"<<endl;
+    	cout<<i<<"  "<<j<<"  "<<vacant[i]<<endl;
+    }
 
-    key.first= rPos % HASH_KEY1_SZ;
+    // calculate the key of the node
+    key.first= rPos % INT_BIT_SZ;
     key.second = 0;
     vacCnt = 0;
-    // simply copy the array
-    int i,j;
     for(  i = 0 ; i<vacant_length ; i++ )    // 0 means an obstacle
     	for( j=0 ; j<INT_BIT_SZ; j++ )
     		if( (vacant[i] & (1<<j)) != 0  ) {

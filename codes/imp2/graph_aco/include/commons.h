@@ -5,10 +5,9 @@
 #define PROJ_COMMONS_H
 #include<vector>
 #include<string>
-using namespace std;
 
-vector<string> split(string str,char delimiter);  // kind of split() statement for the string
-typedef pair<int,int> key_ii;                     // for storing key of hashmap
-
+std::vector<std::string> split(std::string str,char delimiter);  // kind of split() statement for the string
+typedef std::pair<int,int> key_ii;                     // for storing key of hashmap
+int genGraph(int x,int y);
 
 #endif

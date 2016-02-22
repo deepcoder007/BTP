@@ -146,10 +146,12 @@ bool linkListIterator::isGPU()
 
 bool linkListIterator::hasNext()
 {
-    if( list->_getHead()->next == head )
-        return false;
-    else
-        return true;
+	Node* tmpNode = list->_getHead();
+	if( tmpNode==NULL || tmpNode->next == head ) {
+    	return false;
+    } else {
+    	return true;
+    }
 }
 
 configNode* linkListIterator::next()

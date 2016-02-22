@@ -42,14 +42,29 @@ void Graph::readGraph(std::string path) {
         vector<string> v = split(line,',');
         a = atoi(v[0].c_str());
         b = atoi(v[1].c_str());
+        if( a==b )				// discard the self loops in the video
+        	continue;
         a++ ; b++ ;   // very important line to remove 0 nodes
         n = max( n, max(a,b) );
         e++;
         if( g.find(a) == g.end() )
-            g[a] = vector<int>();
-        g[a].push_back(b);
+            g[a] = set<int>();
+        g[a].insert(b);
         nodes.insert(a);
         nodes.insert(b);
+    }
+    // initialize the structure gv
+    set<int>::iterator sit;
+    set<int>::iterator sit2;
+    for( sit=nodes.begin() ; sit!=nodes.end() ; sit++ )   // for each of the nodes
+    {
+    	// convert the g[*sit] to gv[*sit]
+    	for( sit2=g[*sit].begin() ; sit2!=g[*sit].end() ; sit2++ )
+    	{
+    		if( gv.find(*sit) == gv.end() )
+    			gv[*sit] = vector<int>();
+    		gv[*sit].push_back(*sit2);
+    	}
     }
 }
 
@@ -57,7 +72,7 @@ void Graph::readGraph(std::string path) {
 vector<int> Graph::neighbors(int v)
 {
     if( isGraph == true && g.find(v)!=g.end() )
-        return g[v];
+        return gv[v];
     else
         return vector<int>();
 }
@@ -90,7 +105,7 @@ set<int> Graph::getNodes()
 bool Graph::isConnected(int i,int j)
 {
     if( isGraph == false || g.find(i)==g.end() ||
-			find(g[i].begin(),g[i].end(),j)==g[i].end() )
+			find(gv[i].begin(),gv[i].end(),j)==gv[i].end() )
         return false;
     else
         return true;
@@ -99,7 +114,11 @@ bool Graph::isConnected(int i,int j)
 // Returns the structure of the graph
 map<int,vector<int> > Graph::getStruct()
 {
-    return g;
+    return gv;
 }
 
+map<int,set<int> > Graph::getStruct2()
+{
+	return g;
+}
 

@@ -34,6 +34,7 @@ configNodeStorageNaive::configNodeStorageNaive(Graph* g)
 {
     int i,j;
     graph = g;
+    count = 0;
     for( i=0 ; i<HASH_KEY1_SZ ; i++ )
         for( j=0 ; j<HASH_KEY2_SZ ; j++ )
             dt[i][j]=new linkList;
@@ -74,15 +75,15 @@ configNode* configNodeStorageNaive::getConfigNode(Graph* g,int rPos,int len,int*
     			vVacSum += (i*INT_BIT_SZ+j);
     			vacArr[vacSize++] = (i*INT_BIT_SZ+j);
     		}
-
     key_ii key(rPos%HASH_KEY1_SZ,vVacSum%HASH_KEY2_SZ);
     linkListIterator tmpList(dt[key.first][key.second]);  // initialize
     configNode* tmpNode;
 
     bool flag;    // for testing the similarity
+
     while( tmpList.hasNext() )
     {
-        flag = false;       // if true , then dissimilar
+    	flag = false;       // if true , then dissimilar
         tmpNode = tmpList.next();
         // now check if tmpNode is having the same conf
         if( rPos !=  tmpNode->getRobotPos() )
@@ -105,6 +106,8 @@ configNode* configNodeStorageNaive::getConfigNode(Graph* g,int rPos,int len,int*
     // new Node needs to be initialized and update the hash DS
     tmpNode = (configNode*)(new configNodeNaive(g,rPos,len,vPos,this));
     dt[key.first][key.second]->insertNode(tmpNode) ;
+    cout<<" Here BP "<<endl;
+    count++; 		 // increment the counter
     return tmpNode;  // return the newly initialized node
 }
 
@@ -161,4 +164,9 @@ bool configNodeStorageNaive::deleteConfigNode(configNode* ptr)
 configNodeIterator* configNodeStorageNaive::getNodesByKey(key_ii key)
 {
 	return new linkListIterator(dt[key.first][key.second]);  // initialize
+}
+
+int configNodeStorageNaive::getCount()
+{
+	return this->count;
 }
