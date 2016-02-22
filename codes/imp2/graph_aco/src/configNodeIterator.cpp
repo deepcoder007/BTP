@@ -7,13 +7,13 @@
 
 // Implementation  of the config node Iterators
 #include"configNodeIterator.h"
+#include"configNode.h"
 #include<iostream>
 using namespace std;
 
-List::List()
+List::~List()
 {
-    cout<<"[List]: This class should not be initialized"<<endl;
-    exit(-1);
+	// TODO : Trivial code
 }
 
 
@@ -85,7 +85,7 @@ bool linkList::deleteNode(configNode* data)
     Node* tmp = head->next;
     while( tmp != head )
     {
-        if( tmp == head->info ) {
+        if( data == head->info ) {
             delete_head();
             return true;
         } else {
@@ -121,9 +121,9 @@ void linkList::moveHead()
 
 //------------------------- Implementation of the Iterator classes below this line --------------------------
 
-configNodeIterator::configNodeIterator()
+configNodeIterator::~configNodeIterator()
 {
-    cerr<<"[configNodeIterator]: This class should not be initialized "<<endl;
+	// TODO : trivial code
 }
 
 linkListIterator::linkListIterator(linkList* lst)

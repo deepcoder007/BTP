@@ -6,6 +6,9 @@
  */
 // Implements the configNode Structure
 #include"configNode.h"
+#include"configNodeStorage.h"
+#include"configNodeIterator.h"
+#include"Graph.h"
 #include<cstring>
 #include<cstdlib>
 #include<iostream>
@@ -17,10 +20,17 @@ using namespace std;
  * The constructor for the abstract class
  * Initializing this will throw an error
  */
+/*
 configNode::configNode(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
 {
 //    cout<<"[configNode] : This object should not be initialized "<<std::endl;
 //    exit(-1);
+}
+*/
+
+configNode::~configNode()
+{
+	// TODO : Trivial code
 }
 
 /*
@@ -31,13 +41,14 @@ configNode::configNode(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* s
  * 		3. vLen		: The length of vPos array
  * 		4. vPos		: The BITset to store the vacant positions
  */
-configNodeNaive::configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor) : configNode(g,rPos,vLen,vPos,stor)
+configNodeNaive::configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
 {
     vacant_length = vLen;
     vacant = new int[vacant_length];
     roboPos = rPos;
     g_ptr = g;
     storage = stor;
+    memcpy(vacant,vPos,sizeof(int)*vacant_length);
 
     key.first= rPos % HASH_KEY1_SZ;
     key.second = 0;

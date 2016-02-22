@@ -11,12 +11,4 @@ vector<string> split(string str,char delimiter);  // kind of split() statement f
 typedef pair<int,int> key_ii;                     // for storing key of hashmap
 
 
-// Forward declare all the classes here to avoid error
-class configNode;
-class configNodeStorage;
-class configNodeNaive;
-class Graph;
-class configNodeNaive;
-
-
 #endif

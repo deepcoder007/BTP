@@ -1,76 +1,15 @@
-22:05:44 **** Incremental Build of configuration Debug for project graph_aco ****
+07:19:20 **** Incremental Build of configuration Debug for project graph_aco ****
 make all 
-Building file: ../src/Graph.cpp
-Invoking: Cross G++ Compiler
-g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
-Finished building: ../src/Graph.cpp
- 
 Building file: ../src/configNode.cpp
 Invoking: Cross G++ Compiler
 g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
-../src/configNode.cpp:20:1: warning: unused parameter ‘g’ [-Wunused-parameter]
- configNode::configNode(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
- ^
-../src/configNode.cpp:20:1: warning: unused parameter ‘rPos’ [-Wunused-parameter]
-../src/configNode.cpp:20:1: warning: unused parameter ‘vLen’ [-Wunused-parameter]
-../src/configNode.cpp:20:1: warning: unused parameter ‘vPos’ [-Wunused-parameter]
-../src/configNode.cpp:20:1: warning: unused parameter ‘stor’ [-Wunused-parameter]
-../src/configNode.cpp: In member function ‘virtual int configNodeNaive::cntNodes()’:
-../src/configNode.cpp:88:14: error: invalid use of incomplete type ‘class Graph’
-  return g_ptr->cntNodes();
-              ^
-In file included from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/configNode.h:6:0,
-                 from ../src/configNode.cpp:8:
-/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:18:7: error: forward declaration of ‘class Graph’
- class Graph;
-       ^
-../src/configNode.cpp: In member function ‘configNode* configNodeNaive::robotMove(int)’:
-../src/configNode.cpp:99:14: error: invalid use of incomplete type ‘class Graph’
-     if( g_ptr->isConnected(roboPos,pos2) && isVacant(pos2) ) {
-              ^
-In file included from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/configNode.h:6:0,
-                 from ../src/configNode.cpp:8:
-/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:18:7: error: forward declaration of ‘class Graph’
- class Graph;
-       ^
-../src/configNode.cpp:102:35: error: invalid use of incomplete type ‘class configNodeStorage’
-      configNode* tmpNode = storage->getConfigNode(g_ptr,pos2,vacant_length,vacant);
-                                   ^
-In file included from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/configNode.h:6:0,
-                 from ../src/configNode.cpp:8:
-/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:16:7: error: forward declaration of ‘class configNodeStorage’
- class configNodeStorage;
-       ^
-../src/configNode.cpp: In member function ‘virtual configNode* configNodeNaive::obsMove(int, int)’:
-../src/configNode.cpp:118:14: error: invalid use of incomplete type ‘class Graph’
-     if( g_ptr->isConnected(pos1,pos2) &&
-              ^
-In file included from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/configNode.h:6:0,
-                 from ../src/configNode.cpp:8:
-/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:18:7: error: forward declaration of ‘class Graph’
- class Graph;
-       ^
-../src/configNode.cpp:130:35: error: invalid use of incomplete type ‘class configNodeStorage’
-      configNode* tmpNode = storage->getConfigNode(g_ptr,roboPos,vacant_length,tmpArr);
-                                   ^
-In file included from /media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/configNode.h:6:0,
-                 from ../src/configNode.cpp:8:
-/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:16:7: error: forward declaration of ‘class configNodeStorage’
- class configNodeStorage;
-       ^
-../src/configNode.cpp: In member function ‘virtual int configNodeNaive::cntNodes()’:
-../src/configNode.cpp:89:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-../src/configNode.cpp: In member function ‘configNode* configNodeNaive::robotMove(int)’:
-../src/configNode.cpp:108:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-../src/configNode.cpp: In member function ‘virtual configNode* configNodeNaive::obsMove(int, int)’:
-../src/configNode.cpp:136:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/configNode.o] Error 1
+Finished building: ../src/configNode.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o   
+Finished building target: graph_aco
+ 
 
-22:05:45 Build Finished (took 814ms)
+07:19:20 Build Finished (took 376ms)
 

@@ -6,6 +6,9 @@
 #include"commons.h"
 using namespace std;
 
+class configNodeStorage;
+class Graph;
+
 
 /*
     Abstract class for the configuration node
@@ -13,8 +16,7 @@ using namespace std;
 class configNode
 {
 public:
-    configNode(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor);     // initialize the confignode acc. to this graph along with the robot pos
-    virtual ~configNode()=0;
+    virtual ~configNode();
     virtual bool isGPU()=0;
     virtual int getRobotPos()=0;        // also tells the partition of the robot
     virtual bool isVacant(int pos)=0;       // returns the vacancy status
@@ -23,15 +25,14 @@ public:
 
     // Edit configuration -> returns a new configuration after this operation
     // When move is not possible , returns a NULL
-    virtual configNode* robotMove(int pos1,int pos2)=0;   // moves the robot
-    virtual configNode* obsMove(int post1,int pos2)=0;    // moves the obstacle
+    virtual configNode* robotMove(int pos2)=0;   // moves the robot
+    virtual configNode* obsMove(int pos1,int pos2)=0;    // moves the obstacle
 
     // A key , the key is a 2D object
     virtual key_ii getCode()=0;             // Returns a unique string key for config
 };
 
 /* Serial implementation of the config node class */
-// TODO: Maybe a flag can speed up the cntVacant() subroutine
 class configNodeNaive : public configNode
 {
 private:
@@ -49,11 +50,10 @@ public:
     int getRobotPos();        // also tells the partition of the robot
     bool isVacant(int pos);       // returns the vacancy status
     int cntVacant();              // Returns the number of vacant nodes,also tells the layer in which the current node is
-    int cntNodes();    // CAUTION: Assumption that nodes
-    				  // in seq [1,..,n]
+    int cntNodes();    // CAUTION: Assumption that nodes in seq [1,..,n]
 
     configNode* robotMove(int pos2);   // moves the robot
-    configNode* obsMove(int post1,int pos2);    // moves the obstacle
+    configNode* obsMove(int pos1,int pos2);    // moves the obstacle
 
     key_ii getCode();             // Returns a unique string key for config
 };

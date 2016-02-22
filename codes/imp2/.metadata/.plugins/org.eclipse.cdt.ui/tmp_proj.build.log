@@ -1,4 +1,4 @@
-14:24:07 **** Incremental Build of configuration Debug for project tmp_proj ****
+07:03:36 **** Build of configuration Debug for project tmp_proj ****
 make all 
 Building file: ../src/first.cpp
 Invoking: Cross G++ Compiler
@@ -11,5 +11,5 @@ g++  -o "tmp_proj"  ./src/first.o
 Finished building target: tmp_proj
  
 
-14:24:07 Build Finished (took 315ms)
+07:03:36 Build Finished (took 589ms)
 

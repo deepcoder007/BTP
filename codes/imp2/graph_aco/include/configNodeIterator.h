@@ -11,11 +11,12 @@
 #include"constants.h"
 #include"commons.h"
 
+class configNode;
+
 //  An interface for list used in the program
 class List
 {
 public:
-    List();                             // A defunct constructor
     virtual ~List();
     virtual bool isGPU()=0;
     virtual bool isEmpty()=0;
@@ -60,7 +61,6 @@ public:
 class configNodeIterator
 {
 public:
-    configNodeIterator();                  // defunct constructor
     virtual ~configNodeIterator();
     virtual bool isGPU()=0;
     virtual bool hasNext()=0;

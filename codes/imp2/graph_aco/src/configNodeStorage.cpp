@@ -9,15 +9,26 @@
 */
 #include"configNodeStorage.h"
 #include"configNode.h"
+#include"configNodeIterator.h"
+#include<iostream>
+#include<cstdio>
+#include<cstdlib>
+using namespace std;
 
 /*
     The function that should not be invoked
 */
+/*
 configNodeStorage::configNodeStorage(Graph* g)
-{
+{initialize
     cout<<"[configNodeStorage]: This class should not be initialized"<<endl;
-    exit(-1);
 }
+*/
+configNodeStorage::~configNodeStorage()
+{
+	// TODO: Trivial code
+}
+
 
 configNodeStorageNaive::configNodeStorageNaive(Graph* g)
 {
