@@ -1,15 +1,7 @@
-07:03:36 **** Build of configuration Debug for project tmp_proj ****
-make all 
-Building file: ../src/first.cpp
-Invoking: Cross G++ Compiler
-g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/tmp_proj/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/first.d" -MT"src/first.o" -o "src/first.o" "../src/first.cpp"
-Finished building: ../src/first.cpp
- 
-Building target: tmp_proj
-Invoking: Cross G++ Linker
-g++  -o "tmp_proj"  ./src/first.o   
-Finished building target: tmp_proj
+07:40:01 **** Clean-only build of configuration Debug for project tmp_proj ****
+make clean 
+rm -rf  ./src/first.o  ./src/first.d  tmp_proj
  
 
-07:03:36 Build Finished (took 589ms)
+07:40:01 Build Finished (took 76ms)
 

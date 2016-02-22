@@ -969,3 +969,399 @@ Invoking: Cross G++ Linker
 g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o   
 Finished building target: graph_aco
  
+07:24:28 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o   
+Finished building target: graph_aco
+ 
+07:24:43 **** Clean-only build of configuration Debug for project graph_aco ****
+make clean 
+rm -rf  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o  ./src/Graph.d ./src/commons.d ./src/configGraph.d ./src/configNode.d ./src/configNodeIterator.d ./src/configNodeStorage.d ./src/genGraph.d  graph_aco
+ 
+07:24:44 **** Clean-only build of configuration Debug for project tmp_proj ****
+make clean 
+rm -rf  ./src/first.o  ./src/first.d  tmp_proj
+ 
+07:24:44 **** Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+Finished building: ../src/Graph.cpp
+ 
+Building file: ../src/commons.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/commons.d" -MT"src/commons.o" -o "src/commons.o" "../src/commons.cpp"
+Finished building: ../src/commons.cpp
+ 
+Building file: ../src/configGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configGraph.d" -MT"src/configGraph.o" -o "src/configGraph.o" "../src/configGraph.cpp"
+Finished building: ../src/configGraph.cpp
+ 
+Building file: ../src/configNode.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
+Finished building: ../src/configNode.cpp
+ 
+Building file: ../src/configNodeIterator.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeIterator.d" -MT"src/configNodeIterator.o" -o "src/configNodeIterator.o" "../src/configNodeIterator.cpp"
+Finished building: ../src/configNodeIterator.cpp
+ 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o   
+Finished building target: graph_aco
+ 
+07:24:46 **** Build of configuration Debug for project tmp_proj ****
+make all 
+Building file: ../src/first.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/tmp_proj/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/first.d" -MT"src/first.o" -o "src/first.o" "../src/first.cpp"
+Finished building: ../src/first.cpp
+ 
+Building target: tmp_proj
+Invoking: Cross G++ Linker
+g++  -o "tmp_proj"  ./src/first.o   
+Finished building target: tmp_proj
+ 
+07:25:28 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+07:26:50 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+07:29:33 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o   
+Finished building target: graph_aco
+ 
+07:31:23 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o   
+Finished building target: graph_aco
+ 
+07:33:19 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+07:33:38 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o   
+Finished building target: graph_aco
+ 
+07:34:04 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o   
+Finished building target: graph_aco
+ 
+07:34:06 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+07:34:16 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o   
+Finished building target: graph_aco
+ 
+07:34:22 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+07:35:44 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o   
+Finished building target: graph_aco
+ 
+07:35:54 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o   
+Finished building target: graph_aco
+ 
+07:36:26 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o   
+Finished building target: graph_aco
+ 
+07:36:44 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o   
+Finished building target: graph_aco
+ 
+07:37:11 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o   
+Finished building target: graph_aco
+ 
+07:39:42 **** Clean-only build of configuration Debug for project graph_aco ****
+make clean 
+rm -rf  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o  ./src/Graph.d ./src/commons.d ./src/configGraph.d ./src/configNode.d ./src/configNodeIterator.d ./src/configNodeStorage.d ./src/genGraph.d  graph_aco
+ 
+07:39:42 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+../src/Graph.cpp:8:18: fatal error: Graph.h: No such file or directory
+ #include"Graph.h"
+                  ^
+compilation terminated.
+make: *** [src/Graph.o] Error 1
+07:40:01 **** Clean-only build of configuration Debug for project graph_aco ****
+make clean 
+rm -rf  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o  ./src/Graph.d ./src/commons.d ./src/configGraph.d ./src/configNode.d ./src/configNodeIterator.d ./src/configNodeStorage.d ./src/genGraph.d ./src/tmpSrc.d  graph_aco
+ 
+07:40:01 **** Clean-only build of configuration Debug for project tmp_proj ****
+make clean 
+rm -rf  ./src/first.o  ./src/first.d  tmp_proj
+ 
+07:40:01 **** Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+../src/Graph.cpp:8:18: fatal error: Graph.h: No such file or directory
+ #include"Graph.h"
+                  ^
+compilation terminated.
+make: *** [src/Graph.o] Error 1
+07:40:12 **** Clean-only build of configuration Debug for project graph_aco ****
+make clean 
+rm -rf  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o  ./src/Graph.d ./src/commons.d ./src/configGraph.d ./src/configNode.d ./src/configNodeIterator.d ./src/configNodeStorage.d ./src/genGraph.d ./src/tmpSrc.d  graph_aco
+ 
+07:40:12 **** Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+../src/Graph.cpp:8:18: fatal error: Graph.h: No such file or directory
+ #include"Graph.h"
+                  ^
+compilation terminated.
+make: *** [src/Graph.o] Error 1
+07:41:36 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+../src/Graph.cpp:8:20: fatal error: commons.h: No such file or directory
+ #include"commons.h"
+                    ^
+compilation terminated.
+make: *** [src/Graph.o] Error 1
+07:41:53 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+../src/Graph.cpp:9:20: fatal error: commons.h: No such file or directory
+ #include"commons.h"
+                    ^
+compilation terminated.
+make: *** [src/Graph.o] Error 1
+07:42:29 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+../src/Graph.cpp:15:20: fatal error: commons.h: No such file or directory
+ #include"commons.h"
+                    ^
+compilation terminated.
+make: *** [src/Graph.o] Error 1
+07:45:49 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+../src/Graph.cpp:16:18: fatal error: Graph.h: No such file or directory
+ #include"Graph.h"
+                  ^
+compilation terminated.
+make: *** [src/Graph.o] Error 1
+07:46:05 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+Finished building: ../src/Graph.cpp
+ 
+Building file: ../src/commons.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/commons.d" -MT"src/commons.o" -o "src/commons.o" "../src/commons.cpp"
+../src/commons.cpp:8:20: fatal error: commons.h: No such file or directory
+ #include"commons.h"
+                    ^
+compilation terminated.
+make: *** [src/commons.o] Error 1
+07:46:24 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+../src/Graph.cpp:15:20: fatal error: commons.h: No such file or directory
+ #include"commons.h"
+                    ^
+compilation terminated.
+make: *** [src/Graph.o] Error 1
+07:50:09 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+../src/Graph.cpp:15:28: fatal error: include/commons.h: No such file or directory
+ #include"include/commons.h"
+                            ^
+compilation terminated.
+make: *** [src/Graph.o] Error 1
+07:50:48 **** Clean-only build of configuration Debug for project graph_aco ****
+make clean 
+rm -rf  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o  ./src/Graph.d ./src/commons.d ./src/configGraph.d ./src/configNode.d ./src/configNodeIterator.d ./src/configNodeStorage.d ./src/genGraph.d ./src/tmpSrc.d  graph_aco
+ 
+07:50:48 **** Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+Finished building: ../src/Graph.cpp
+ 
+Building file: ../src/commons.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/commons.d" -MT"src/commons.o" -o "src/commons.o" "../src/commons.cpp"
+Finished building: ../src/commons.cpp
+ 
+Building file: ../src/configGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configGraph.d" -MT"src/configGraph.o" -o "src/configGraph.o" "../src/configGraph.cpp"
+Finished building: ../src/configGraph.cpp
+ 
+Building file: ../src/configNode.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
+Finished building: ../src/configNode.cpp
+ 
+Building file: ../src/configNodeIterator.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeIterator.d" -MT"src/configNodeIterator.o" -o "src/configNodeIterator.o" "../src/configNodeIterator.cpp"
+Finished building: ../src/configNodeIterator.cpp
+ 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+./src/tmpSrc.o: In function `main':
+/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/Debug/../src/tmpSrc.cpp:15: multiple definition of `main'
+./src/genGraph.o:/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/Debug/../src/genGraph.cpp:21: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [graph_aco] Error 1
+07:52:27 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 

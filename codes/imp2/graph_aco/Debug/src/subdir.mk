@@ -10,7 +10,8 @@ CPP_SRCS += \
 ../src/configNode.cpp \
 ../src/configNodeIterator.cpp \
 ../src/configNodeStorage.cpp \
-../src/genGraph.cpp 
+../src/genGraph.cpp \
+../src/tmpSrc.cpp 
 
 OBJS += \
 ./src/Graph.o \
@@ -19,7 +20,8 @@ OBJS += \
 ./src/configNode.o \
 ./src/configNodeIterator.o \
 ./src/configNodeStorage.o \
-./src/genGraph.o 
+./src/genGraph.o \
+./src/tmpSrc.o 
 
 CPP_DEPS += \
 ./src/Graph.d \
@@ -28,7 +30,8 @@ CPP_DEPS += \
 ./src/configNode.d \
 ./src/configNodeIterator.d \
 ./src/configNodeStorage.d \
-./src/genGraph.d 
+./src/genGraph.d \
+./src/tmpSrc.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

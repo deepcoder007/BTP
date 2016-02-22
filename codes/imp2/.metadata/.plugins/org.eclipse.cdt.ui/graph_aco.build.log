@@ -1,15 +1,15 @@
-07:19:20 **** Incremental Build of configuration Debug for project graph_aco ****
+07:52:27 **** Incremental Build of configuration Debug for project graph_aco ****
 make all 
-Building file: ../src/configNode.cpp
+Building file: ../src/genGraph.cpp
 Invoking: Cross G++ Compiler
-g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
-Finished building: ../src/configNode.cpp
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
  
 Building target: graph_aco
 Invoking: Cross G++ Linker
-g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o   
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
 Finished building target: graph_aco
  
 
-07:19:20 Build Finished (took 376ms)
+07:52:27 Build Finished (took 320ms)
 
