@@ -43,6 +43,10 @@ configNode::~configNode()
  */
 configNodeNaive::configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
 {
+	int tmp = g->cntNodes()/INT_BIT_SZ + 1 ;
+	if( vacant_length < tmp ) {  // not allocated enough space to vPos
+
+	}
     vacant_length = vLen;
     vacant = new int[vacant_length];
     roboPos = rPos;

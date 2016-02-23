@@ -9,7 +9,6 @@ using namespace std;
 class configNodeStorage;
 class Graph;
 
-
 /*
     Abstract class for the configuration node
 */

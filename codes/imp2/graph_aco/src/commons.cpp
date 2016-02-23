@@ -23,7 +23,6 @@ vector<string> split(string str, char delimiter) {
     return interval;
 }
 
-enum edgeType{NONE,INTERNAL,EXTERNAL};
 
 
 

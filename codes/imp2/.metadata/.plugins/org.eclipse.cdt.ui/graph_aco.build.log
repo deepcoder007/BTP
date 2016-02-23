@@ -1,15 +1,21 @@
-13:57:06 **** Incremental Build of configuration Debug for project graph_aco ****
+13:06:10 **** Build of configuration Debug for project graph_aco ****
 make all 
-Building file: ../src/configNodeStorage.cpp
+Building file: ../src/Graph.cpp
 Invoking: Cross G++ Compiler
-g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
-Finished building: ../src/configNodeStorage.cpp
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+Finished building: ../src/Graph.cpp
  
-Building target: graph_aco
-Invoking: Cross G++ Linker
-g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
-Finished building target: graph_aco
- 
+Building file: ../src/commons.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/commons.d" -MT"src/commons.o" -o "src/commons.o" "../src/commons.cpp"
+../src/commons.cpp:26:6: error: multiple definition of ‘enum edgeType’
+ enum edgeType{NONE,INTERNAL,EXTERNAL};
+      ^
+In file included from ../src/commons.cpp:8:0:
+/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:12:6: error: previous definition here
+ enum edgeType{NONE,INTERNAL,EXTERNAL};
+      ^
+make: *** [src/commons.o] Error 1
 
-13:57:07 Build Finished (took 467ms)
+13:06:12 Build Finished (took 2s.22ms)
 

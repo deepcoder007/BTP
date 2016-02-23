@@ -1,0 +1,172 @@
+/*
+ * configNodeStorage.cpp
+ *
+ *  Created on: 21-Feb-2016
+ *      Author: vibhanshu
+ */
+/*
+    Implementation of the configuration node storage structures
+*/
+#include"configNodeStorage.h"
+#include"configNode.h"
+#include"configNodeIterator.h"
+#include<iostream>
+#include<cstdio>
+#include<cstdlib>
+using namespace std;
+
+/*
+    The function that should not be invoked
+*/
+/*
+configNodeStorage::configNodeStorage(Graph* g)
+{initialize
+    cout<<"[configNodeStorage]: This class should not be initialized"<<endl;
+}
+*/
+configNodeStorage::~configNodeStorage()
+{
+	// TODO: Trivial code
+}
+
+
+configNodeStorageNaive::configNodeStorageNaive(Graph* g)
+{
+    int i,j;
+    graph = g;
+    count = 0;
+    for( i=0 ; i<HASH_KEY1_SZ ; i++ )
+        for( j=0 ; j<HASH_KEY2_SZ ; j++ )
+            dt[i][j]=new linkList;
+}
+
+configNodeStorageNaive::~configNodeStorageNaive()
+{
+    int i,j;
+    for( i=0 ; i<HASH_KEY1_SZ ; i++ )
+        for( j=0 ; j<HASH_KEY2_SZ ; j++ )
+            delete dt[i][j];
+}
+
+bool configNodeStorageNaive::isGPU()
+{
+    return false;
+}
+
+/*
+ * Returns the node correspoding to the configuration or
+ * returns a new node if no such node exist
+ * This function initializes the properties of configNode
+ * ARGUMENTS:
+ * 		g 		: The underlying graph
+ * 		rPos 	: The position of the robot
+ * 		len		: The length of the vPos array
+ * 		vPos	: The bitwise representation of the array
+ */
+configNode* configNodeStorageNaive::getConfigNode(Graph* g,int rPos,int len,int* vPos)
+{
+    int vVacSum = 0;
+    int vacSize = 0;	// number of vacant nodes
+    int* vacArr = new int[g->cntNodes()]; // list of vacancies
+    int i,j;
+    for( i=0 ; i<len ; i++ )
+    	for( j=0 ; j<INT_BIT_SZ ; j++ )
+    		if( (vPos[i] & (1<<j)) != 0 ) {
+    			vVacSum += (i*INT_BIT_SZ+j);
+    			vacArr[vacSize++] = (i*INT_BIT_SZ+j);
+    		}
+    key_ii key(rPos%HASH_KEY1_SZ,vVacSum%HASH_KEY2_SZ);
+    linkListIterator tmpList(dt[key.first][key.second]);  // initialize
+    configNode* tmpNode;
+
+    bool flag;    // for testing the similarity
+
+    while( tmpList.hasNext() )
+    {
+    	flag = false;       // if true , then dissimilar
+        tmpNode = tmpList.next();
+        // now check if tmpNode is having the same conf
+        if( rPos !=  tmpNode->getRobotPos() )
+            flag = true;
+        else if ( vacSize != tmpNode->cntVacant() )
+            flag = true;
+        else {
+            for( i = 0 ; i<vacSize ; i++ )
+                if ( tmpNode->isVacant(vacArr[i]) == false )
+                {
+                	flag = true;
+                	break;
+                }
+        }
+        if( flag == false )    // i.e. node found
+            return tmpNode;
+    }
+    delete[] vacArr;
+
+    // new Node needs to be initialized and update the hash DS
+    tmpNode = (configNode*)(new configNodeNaive(g,rPos,len,vPos,this));
+    dt[key.first][key.second]->insertNode(tmpNode) ;
+    cout<<" Here BP "<<endl;
+    count++; 		 // increment the counter
+    return tmpNode;  // return the newly initialized node
+}
+
+/*
+ * Deletes the configNode corresponding to the ptr
+ */
+bool configNodeStorageNaive::deleteConfigNode(configNode* ptr)
+{
+	// first calculate the key for (*ptr)
+	key_ii key;
+	key.first = (ptr->getRobotPos() % HASH_KEY1_SZ);
+	int n = ptr->cntNodes();
+
+	// TODO: Edit code below
+	int tmp=0;			// A temporary variable
+	for( int i=1;i<=n;i++ )	{
+		if( ptr->isVacant(i)   ) {
+			tmp+=i;
+		}
+	}
+	key.second= (tmp % HASH_KEY2_SZ);
+
+	linkListIterator tmpList(dt[key.first][key.second]);  // initialize
+	configNode* tmpNode;
+	bool flag;    // for testing the similarity
+	while( tmpList.hasNext() )
+	{
+		flag = false;       // if true , then dissimilar
+	    tmpNode = tmpList.next();
+	    // now check if tmpNode is having the same conf
+	    if( ptr->getRobotPos() !=  tmpNode->getRobotPos() )
+	    	flag = true;
+	    else if ( ptr->cntVacant() != tmpNode->cntVacant() )
+	        flag = true;
+	    else {
+	        for( int i = 1 ; i<n ; i++ )
+	        	if( tmpNode->isVacant(i) != ptr->isVacant(i) ) {
+	        		flag=true;
+	        		break;
+	        	}
+	    }
+	    if( flag == false )    // i.e. node found
+	    {
+	    	// Delete the tmpNode
+	    	dt[key.first][key.second]->deleteNode(tmpNode);
+	    	// This will be a constant time operation because due
+	    	// to iterators, this node is already at head.
+	    	return true;
+	    }
+	}
+	return false;  // i.e. no such node exist
+}
+
+configNodeIterator* configNodeStorageNaive::getNodesByKey(key_ii key)
+{
+	return new linkListIterator(dt[key.first][key.second]);  // initialize
+}
+
+int configNodeStorageNaive::getCount()
+{
+	return this->count;
+}

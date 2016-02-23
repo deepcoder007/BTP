@@ -100,13 +100,13 @@ configNode* configNodeStorageNaive::getConfigNode(Graph* g,int rPos,int len,int*
         }
         if( flag == false )    // i.e. node found
             return tmpNode;
+        tmpList.pop();
     }
     delete[] vacArr;
 
     // new Node needs to be initialized and update the hash DS
     tmpNode = (configNode*)(new configNodeNaive(g,rPos,len,vPos,this));
     dt[key.first][key.second]->insertNode(tmpNode) ;
-    cout<<" Here BP "<<endl;
     count++; 		 // increment the counter
     return tmpNode;  // return the newly initialized node
 }
@@ -169,4 +169,13 @@ configNodeIterator* configNodeStorageNaive::getNodesByKey(key_ii key)
 int configNodeStorageNaive::getCount()
 {
 	return this->count;
+}
+
+void configNodeStorageNaive::clear()
+{
+	register int i,j;
+	for( i=0 ; i<HASH_KEY1_SZ ; i++ )
+		for( j=0 ; j<HASH_KEY2_SZ; j++ )
+			dt[i][j]->deleteAll();
+	count = 0;
 }

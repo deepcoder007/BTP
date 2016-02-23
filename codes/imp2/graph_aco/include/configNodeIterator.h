@@ -22,6 +22,7 @@ public:
     virtual bool isEmpty()=0;
     virtual void insertNode(configNode* data)=0;
     virtual bool deleteNode(configNode* data)=0;
+    virtual bool deleteAll()=0;
     virtual configNode* getHead()=0;
     virtual void moveHead()=0;
 };
@@ -77,8 +78,10 @@ public:
 class linkListIterator : public configNodeIterator
 {
 private:
-    linkList* list;
-    Node* head;             // NOTE: this is different from the head of the original list which is circular
+//    linkList* list;
+    Node* head;        // NOTE: this is different from the head of the original list which is circular
+    Node* curr;		   // The node where it is currently pointing
+    bool flag;		   // A temporary flag
 public:
     linkListIterator(linkList* lst);
     ~linkListIterator();

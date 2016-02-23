@@ -9,5 +9,6 @@
 std::vector<std::string> split(std::string str,char delimiter);  // kind of split() statement for the string
 typedef std::pair<int,int> key_ii;                     // for storing key of hashmap
 int genGraph(int x,int y);
+enum edgeType{NONE,INTERNAL,EXTERNAL};
 
 #endif

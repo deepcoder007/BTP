@@ -128,14 +128,16 @@ configNodeIterator::~configNodeIterator()
 
 linkListIterator::linkListIterator(linkList* lst)
 {
-    list=lst;
-    head = lst->_getHead();
+//    list=lst;
+    head = lst->_getHead(); // the head of the list currently
+    curr = head;
+    flag = false;  // to check if head is visited
 }
 
 // TRIVIAL , for security and completeness purpose
 linkListIterator::~linkListIterator()
 {
-    list = 0;
+ //   list = 0;
     head = 0;
 }
 
@@ -146,22 +148,26 @@ bool linkListIterator::isGPU()
 
 bool linkListIterator::hasNext()
 {
-	Node* tmpNode = list->_getHead();
-	if( tmpNode==NULL || tmpNode->next == head ) {
-    	return false;
-    } else {
-    	return true;
-    }
+	if( head==NULL ) {  // i.e. the empty list
+		return false;
+	}
+	if( curr == head && flag == true  ) {  // head already read
+		return false;
+	} else {   // any other node
+		return true;
+	}
 }
 
 configNode* linkListIterator::next()
 {
-    return list->getHead();
+    return curr->info;
 }
 
 void linkListIterator::pop()
 {
-    list->moveHead();
+	if( curr == head )  // if it was head, mark it read
+		flag = true;
+    curr = curr->next;
 }
 
 

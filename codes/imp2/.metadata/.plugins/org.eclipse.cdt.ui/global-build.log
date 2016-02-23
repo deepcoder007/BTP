@@ -1292,3 +1292,1060 @@ Invoking: Cross G++ Linker
 g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
 Finished building target: graph_aco
  
+07:40:02 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNode.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
+Finished building: ../src/configNode.cpp
+ 
+Building file: ../src/configNodeIterator.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeIterator.d" -MT"src/configNodeIterator.o" -o "src/configNodeIterator.o" "../src/configNodeIterator.cpp"
+Finished building: ../src/configNodeIterator.cpp
+ 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:42:14: warning: variable ‘tmp2’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2;
+              ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:40:26 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:42:14: warning: variable ‘tmp2’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2;
+              ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:40:34 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:42:14: warning: variable ‘tmp2’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2;
+              ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:43:49 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeIterator.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeIterator.d" -MT"src/configNodeIterator.o" -o "src/configNodeIterator.o" "../src/configNodeIterator.cpp"
+Finished building: ../src/configNodeIterator.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:44:38 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:48:01 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeIterator.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeIterator.d" -MT"src/configNodeIterator.o" -o "src/configNodeIterator.o" "../src/configNodeIterator.cpp"
+Finished building: ../src/configNodeIterator.cpp
+ 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:48:12 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+07:51:07 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:51:17 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:51:35 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:42:14: warning: variable ‘tmp2’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2;
+              ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:52:55 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+07:53:09 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+07:53:33 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+07:53:54 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+07:54:04 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+07:54:18 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+07:54:32 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeIterator.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeIterator.d" -MT"src/configNodeIterator.o" -o "src/configNodeIterator.o" "../src/configNodeIterator.cpp"
+Finished building: ../src/configNodeIterator.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:54:52 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeIterator.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeIterator.d" -MT"src/configNodeIterator.o" -o "src/configNodeIterator.o" "../src/configNodeIterator.cpp"
+Finished building: ../src/configNodeIterator.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:55:01 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeIterator.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeIterator.d" -MT"src/configNodeIterator.o" -o "src/configNodeIterator.o" "../src/configNodeIterator.cpp"
+Finished building: ../src/configNodeIterator.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:55:29 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeIterator.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeIterator.d" -MT"src/configNodeIterator.o" -o "src/configNodeIterator.o" "../src/configNodeIterator.cpp"
+Finished building: ../src/configNodeIterator.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:56:13 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeIterator.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeIterator.d" -MT"src/configNodeIterator.o" -o "src/configNodeIterator.o" "../src/configNodeIterator.cpp"
+Finished building: ../src/configNodeIterator.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:56:41 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+07:56:48 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+07:57:07 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+07:57:29 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:58:49 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:59:01 **** Clean-only build of configuration Debug for project graph_aco ****
+make clean 
+rm -rf  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o  ./src/Graph.d ./src/commons.d ./src/configGraph.d ./src/configNode.d ./src/configNodeIterator.d ./src/configNodeStorage.d ./src/genGraph.d ./src/tmpSrc.d  graph_aco
+ 
+07:59:01 **** Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+Finished building: ../src/Graph.cpp
+ 
+Building file: ../src/commons.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/commons.d" -MT"src/commons.o" -o "src/commons.o" "../src/commons.cpp"
+Finished building: ../src/commons.cpp
+ 
+Building file: ../src/configGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configGraph.d" -MT"src/configGraph.o" -o "src/configGraph.o" "../src/configGraph.cpp"
+Finished building: ../src/configGraph.cpp
+ 
+Building file: ../src/configNode.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
+Finished building: ../src/configNode.cpp
+ 
+Building file: ../src/configNodeIterator.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeIterator.d" -MT"src/configNodeIterator.o" -o "src/configNodeIterator.o" "../src/configNodeIterator.cpp"
+Finished building: ../src/configNodeIterator.cpp
+ 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:42:14: warning: variable ‘tmp2’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2;
+              ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+07:59:05 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+07:59:08 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+08:04:02 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeIterator.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeIterator.d" -MT"src/configNodeIterator.o" -o "src/configNodeIterator.o" "../src/configNodeIterator.cpp"
+Finished building: ../src/configNodeIterator.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:04:17 **** Clean-only build of configuration Debug for project graph_aco ****
+make clean 
+rm -rf  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o  ./src/Graph.d ./src/commons.d ./src/configGraph.d ./src/configNode.d ./src/configNodeIterator.d ./src/configNodeStorage.d ./src/genGraph.d ./src/tmpSrc.d  graph_aco
+ 
+08:04:17 **** Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+Finished building: ../src/Graph.cpp
+ 
+Building file: ../src/commons.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/commons.d" -MT"src/commons.o" -o "src/commons.o" "../src/commons.cpp"
+Finished building: ../src/commons.cpp
+ 
+Building file: ../src/configGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configGraph.d" -MT"src/configGraph.o" -o "src/configGraph.o" "../src/configGraph.cpp"
+Finished building: ../src/configGraph.cpp
+ 
+Building file: ../src/configNode.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
+Finished building: ../src/configNode.cpp
+ 
+Building file: ../src/configNodeIterator.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeIterator.d" -MT"src/configNodeIterator.o" -o "src/configNodeIterator.o" "../src/configNodeIterator.cpp"
+Finished building: ../src/configNodeIterator.cpp
+ 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:42:14: warning: variable ‘tmp2’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2;
+              ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:19:57 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNode.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
+Finished building: ../src/configNode.cpp
+ 
+Building file: ../src/configNodeIterator.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeIterator.d" -MT"src/configNodeIterator.o" -o "src/configNodeIterator.o" "../src/configNodeIterator.cpp"
+Finished building: ../src/configNodeIterator.cpp
+ 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:42:14: warning: variable ‘tmp2’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2;
+              ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:20:04 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+08:20:32 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:42:14: warning: variable ‘tmp2’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2;
+              ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:20:52 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:42:14: warning: variable ‘tmp2’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2;
+              ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:21:14 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:21:23 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:42:14: warning: variable ‘tmp2’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2;
+              ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:21:47 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:42:14: warning: variable ‘tmp2’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2;
+              ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:22:29 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+../src/configNodeStorage.cpp: In member function ‘virtual configNode* configNodeStorageNaive::getConfigNode(Graph*, int, int, int*)’:
+../src/configNodeStorage.cpp:82:17: error: expected primary-expression before ‘<<’ token
+     cout<<__FILE<<" : "<<key.first<<" : "<<key.second<<endl;
+                 ^
+make: *** [src/configNodeStorage.o] Error 1
+08:22:37 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:22:49 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+08:24:05 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:24:40 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:24:55 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+08:25:22 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:42:14: warning: variable ‘tmp2’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2;
+              ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:25:40 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:27:44 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeIterator.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeIterator.d" -MT"src/configNodeIterator.o" -o "src/configNodeIterator.o" "../src/configNodeIterator.cpp"
+Finished building: ../src/configNodeIterator.cpp
+ 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:38:14: warning: variable ‘tmp2’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2;
+              ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:28:34 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:38:20: warning: variable ‘tmp1’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                    ^
+../src/tmpSrc.cpp:38:26: warning: unused variable ‘tmp3’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                          ^
+../src/tmpSrc.cpp:38:32: warning: unused variable ‘tmp4’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                                ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:29:49 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNode.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
+Finished building: ../src/configNode.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:30:02 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNode.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
+Finished building: ../src/configNode.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:30:42 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNode.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
+Finished building: ../src/configNode.cpp
+ 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:38:20: warning: variable ‘tmp1’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                    ^
+../src/tmpSrc.cpp:38:26: warning: unused variable ‘tmp3’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                          ^
+../src/tmpSrc.cpp:38:32: warning: unused variable ‘tmp4’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                                ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:30:52 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:38:20: warning: variable ‘tmp1’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                    ^
+../src/tmpSrc.cpp:38:26: warning: unused variable ‘tmp3’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                          ^
+../src/tmpSrc.cpp:38:32: warning: unused variable ‘tmp4’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                                ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:31:00 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:38:20: warning: variable ‘tmp1’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                    ^
+../src/tmpSrc.cpp:38:26: warning: unused variable ‘tmp3’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                          ^
+../src/tmpSrc.cpp:38:32: warning: unused variable ‘tmp4’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                                ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:31:32 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:38:20: warning: variable ‘tmp1’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                    ^
+../src/tmpSrc.cpp:38:26: warning: unused variable ‘tmp3’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                          ^
+../src/tmpSrc.cpp:38:32: warning: unused variable ‘tmp4’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                                ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:31:42 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:38:20: warning: variable ‘tmp1’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                    ^
+../src/tmpSrc.cpp:38:26: warning: unused variable ‘tmp3’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                          ^
+../src/tmpSrc.cpp:38:32: warning: unused variable ‘tmp4’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                                ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:32:01 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:38:26: warning: unused variable ‘tmp3’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                          ^
+../src/tmpSrc.cpp:38:32: warning: unused variable ‘tmp4’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                                ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:32:18 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:39:26: warning: unused variable ‘tmp3’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                          ^
+../src/tmpSrc.cpp:39:32: warning: unused variable ‘tmp4’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                                ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:32:23 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+08:32:44 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:39:26: warning: unused variable ‘tmp3’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                          ^
+../src/tmpSrc.cpp:39:32: warning: unused variable ‘tmp4’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                                ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:32:48 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+08:33:28 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:41:26: warning: variable ‘tmp3’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                          ^
+../src/tmpSrc.cpp:41:32: warning: unused variable ‘tmp4’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                                ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:33:54 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNode.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
+Finished building: ../src/configNode.cpp
+ 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:41:32: warning: unused variable ‘tmp4’ [-Wunused-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4;
+                                ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:34:33 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+08:34:49 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+make: Nothing to be done for `all'.
+08:35:03 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+09:21:31 **** Clean-only build of configuration Debug for project graph_aco ****
+make clean 
+rm -rf  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o  ./src/Graph.d ./src/commons.d ./src/configGraph.d ./src/configNode.d ./src/configNodeIterator.d ./src/configNodeStorage.d ./src/genGraph.d ./src/tmpSrc.d  graph_aco
+ 
+09:21:31 **** Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+Finished building: ../src/Graph.cpp
+ 
+Building file: ../src/commons.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/commons.d" -MT"src/commons.o" -o "src/commons.o" "../src/commons.cpp"
+Finished building: ../src/commons.cpp
+ 
+Building file: ../src/configGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configGraph.d" -MT"src/configGraph.o" -o "src/configGraph.o" "../src/configGraph.cpp"
+Finished building: ../src/configGraph.cpp
+ 
+Building file: ../src/configNode.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
+Finished building: ../src/configNode.cpp
+ 
+Building file: ../src/configNodeIterator.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeIterator.d" -MT"src/configNodeIterator.o" -o "src/configNodeIterator.o" "../src/configNodeIterator.cpp"
+Finished building: ../src/configNodeIterator.cpp
+ 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building file: ../src/genGraph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/genGraph.d" -MT"src/genGraph.o" -o "src/genGraph.o" "../src/genGraph.cpp"
+Finished building: ../src/genGraph.cpp
+ 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+09:24:02 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/configNodeStorage.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNodeStorage.d" -MT"src/configNodeStorage.o" -o "src/configNodeStorage.o" "../src/configNodeStorage.cpp"
+Finished building: ../src/configNodeStorage.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+09:24:20 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+09:24:44 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+09:25:59 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+09:26:09 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+09:26:49 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+09:26:59 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+09:27:07 **** Incremental Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
+13:06:10 **** Clean-only build of configuration Debug for project graph_aco ****
+make clean 
+rm -rf  ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/tmpSrc.o  ./src/Graph.d ./src/commons.d ./src/configGraph.d ./src/configNode.d ./src/configNodeIterator.d ./src/configNodeStorage.d ./src/genGraph.d ./src/tmpSrc.d  graph_aco
+ 
+13:06:10 **** Build of configuration Debug for project graph_aco ****
+make all 
+Building file: ../src/Graph.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
+Finished building: ../src/Graph.cpp
+ 
+Building file: ../src/commons.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/commons.d" -MT"src/commons.o" -o "src/commons.o" "../src/commons.cpp"
+../src/commons.cpp:26:6: error: multiple definition of ‘enum edgeType’
+ enum edgeType{NONE,INTERNAL,EXTERNAL};
+      ^
+In file included from ../src/commons.cpp:8:0:
+/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:12:6: error: previous definition here
+ enum edgeType{NONE,INTERNAL,EXTERNAL};
+      ^
+make: *** [src/commons.o] Error 1

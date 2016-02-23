@@ -9,20 +9,21 @@
 #define CONFIGGRAPH_H_
 
 #include"configNode.h"  // for the configNode data structure
+#include"commons.h"
+#include"constants.h"
 #include<vector>
 
-/*
+
 class configGraph
 {
 private:
-
+	configNode* base;
 public:
-    configGraph();
+    configGraph(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor);
     bool isGPU();
     edgeType adjacent(configNode* a,configNode* b);   // tells if a->b is a valid edge
     vector<configNode*> getNeighbors(configNode* a);   // returns the list of neighbours of a
 
-
 };
-*/
+
 #endif /* CONFIGGRAPH_H_ */

@@ -36,6 +36,9 @@ public:
     virtual bool deleteConfigNode(configNode* ptr)=0;       // Deletes this configNode from the structure
     virtual configNodeIterator* getNodesByKey(key_ii key)=0;
     virtual int getCount()=0;	// no. of nodes stored
+
+    // CAUTION: potentially dangerous routines
+    void clear();
 };
 
 // The serial implementation of the configNodeStorage construct
@@ -53,6 +56,9 @@ public:
     bool deleteConfigNode(configNode* ptr);
     configNodeIterator* getNodesByKey(key_ii key); // in this case a listNodeIt.
     int getCount();
+
+    // CAUTION: potentially dangerous routines
+    void clear();
 };
 
 // The GPU implementation of the configNodeStorage
