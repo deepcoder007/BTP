@@ -1,0 +1,27 @@
+/*
+ * first.cpp
+ *
+ *  Created on: 21-Feb-2016
+ *      Author: vibhanshu
+ */
+
+
+#include"first.h"
+
+struct s
+{
+	int a[100];
+};
+
+int main()
+{
+	cout<<"Hello World"<<endl;
+	int a;
+	float b;
+	double c;
+	cout<<sizeof(&a)<<endl;
+	cout<<sizeof(&b)<<endl;
+	cout<<sizeof(&c)<<endl;
+	return 0;
+}
+

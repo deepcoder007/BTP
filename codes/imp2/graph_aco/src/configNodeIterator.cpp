@@ -32,6 +32,8 @@ linkList::~linkList()
 
 void linkList::delete_head()
 {
+	if( head == NULL )  // EDGE case that the list is empty
+		return ;
     if( head->next == head && head->prev == head ) // i.e. single element list
     {
         delete head->info;
@@ -43,7 +45,7 @@ void linkList::delete_head()
         tmp->prev->next = tmp;
         delete head->info;
         delete head;
-        head = NULL;
+        head = tmp;
     }
 }
 
@@ -78,21 +80,32 @@ void linkList::insertNode(configNode* data)
 
 bool linkList::deleteNode(configNode* data)
 {
+	if( head == NULL )  {   // very critical EDGE case
+		return false;
+	}
     if(data == head->info) {
         delete_head();
         return true;
     }
-    Node* tmp = head->next;
-    while( tmp != head )
+    Node* tmp = head;
+    bool flag = false;    // if true, means head is already visited
+    while( tmp != head || flag == false )
     {
-        if( data == head->info ) {
-            delete_head();
-            return true;
+    	if( tmp == head )   // since current iter is over head, next time don't use head
+    		flag = true;
+        if( data == tmp->info ) {
+        	break;
         } else {
             tmp = tmp->next;
         }
     }
-    return false;
+    if( tmp->info == data ) {
+    	head = tmp;
+    	delete_head();
+    	return true;
+    } else {
+    	return false;
+    }
 }
 
 bool linkList::deleteAll()

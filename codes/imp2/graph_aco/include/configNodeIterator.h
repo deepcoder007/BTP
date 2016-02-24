@@ -70,15 +70,11 @@ public:
 };
 
 /*
- * TODO : Checkout the bug in hasNext() subroutine
- * in the configNodeStorage class,
- * when the list is empty, the node is getting
- * inserted twice -> an edge case.
+ * The iterator class for iterating the linkLists we devised above
  */
 class linkListIterator : public configNodeIterator
 {
 private:
-//    linkList* list;
     Node* head;        // NOTE: this is different from the head of the original list which is circular
     Node* curr;		   // The node where it is currently pointing
     bool flag;		   // A temporary flag

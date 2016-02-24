@@ -45,7 +45,7 @@ configNodeNaive::configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNode
 {
 	int tmp = g->cntNodes()/INT_BIT_SZ + 1 ;
 	if( vacant_length < tmp ) {  // not allocated enough space to vPos
-
+		cout<<"[ERROR]: Not enough memory allocated for storing vacant array"<<endl;
 	}
     vacant_length = vLen;
     vacant = new int[vacant_length];

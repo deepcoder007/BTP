@@ -13,7 +13,6 @@
 #include"constants.h"
 #include<vector>
 
-
 class configGraph
 {
 private:
@@ -25,5 +24,6 @@ public:
     vector<configNode*> getNeighbors(configNode* a);   // returns the list of neighbours of a
 
 };
+
 
 #endif /* CONFIGGRAPH_H_ */

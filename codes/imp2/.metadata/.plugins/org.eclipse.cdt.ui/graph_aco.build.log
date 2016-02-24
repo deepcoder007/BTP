@@ -1,21 +1,6 @@
-13:06:10 **** Build of configuration Debug for project graph_aco ****
+08:18:32 **** Incremental Build of configuration Debug for project graph_aco ****
 make all 
-Building file: ../src/Graph.cpp
-Invoking: Cross G++ Compiler
-g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/Graph.d" -MT"src/Graph.o" -o "src/Graph.o" "../src/Graph.cpp"
-Finished building: ../src/Graph.cpp
- 
-Building file: ../src/commons.cpp
-Invoking: Cross G++ Compiler
-g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/commons.d" -MT"src/commons.o" -o "src/commons.o" "../src/commons.cpp"
-../src/commons.cpp:26:6: error: multiple definition of ‘enum edgeType’
- enum edgeType{NONE,INTERNAL,EXTERNAL};
-      ^
-In file included from ../src/commons.cpp:8:0:
-/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include/commons.h:12:6: error: previous definition here
- enum edgeType{NONE,INTERNAL,EXTERNAL};
-      ^
-make: *** [src/commons.o] Error 1
+make: Nothing to be done for `all'.
 
-13:06:12 Build Finished (took 2s.22ms)
+08:18:32 Build Finished (took 66ms)
 

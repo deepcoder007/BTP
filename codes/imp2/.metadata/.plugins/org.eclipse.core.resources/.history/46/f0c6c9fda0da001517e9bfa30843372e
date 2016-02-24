@@ -1,0 +1,20 @@
+/*
+ * first.cpp
+ *
+ *  Created on: 21-Feb-2016
+ *      Author: vibhanshu
+ */
+
+
+#include"first.h"
+
+int main()
+{
+	cout<<"Hello World"<<endl;
+	int a;
+	float b;
+	double c;
+	cout<<sizeof(&a)<<endl;
+	return 0;
+}
+
