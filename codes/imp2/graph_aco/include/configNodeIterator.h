@@ -38,6 +38,12 @@ struct Node
 
 // A link list to store the configNode structures -> I am implementing it as a circular list
 // for better flexibility and for performance reasons
+/*
+ * TOOD: instead of using one Node to store one configNode,
+ * it will be better to store multiple configNodes like 10-100
+ * for better performance because it will help avoiding multiple
+ * read-write.
+ */
 class linkList: public List
 {
 private:

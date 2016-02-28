@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../src/ACO.cpp \
 ../src/Graph.cpp \
 ../src/commons.cpp \
 ../src/configGraph.cpp \
@@ -11,9 +12,11 @@ CPP_SRCS += \
 ../src/configNodeIterator.cpp \
 ../src/configNodeStorage.cpp \
 ../src/genGraph.cpp \
+../src/pheromones.cpp \
 ../src/tmpSrc.cpp 
 
 OBJS += \
+./src/ACO.o \
 ./src/Graph.o \
 ./src/commons.o \
 ./src/configGraph.o \
@@ -21,9 +24,11 @@ OBJS += \
 ./src/configNodeIterator.o \
 ./src/configNodeStorage.o \
 ./src/genGraph.o \
+./src/pheromones.o \
 ./src/tmpSrc.o 
 
 CPP_DEPS += \
+./src/ACO.d \
 ./src/Graph.d \
 ./src/commons.d \
 ./src/configGraph.d \
@@ -31,6 +36,7 @@ CPP_DEPS += \
 ./src/configNodeIterator.d \
 ./src/configNodeStorage.d \
 ./src/genGraph.d \
+./src/pheromones.d \
 ./src/tmpSrc.d 
 
 

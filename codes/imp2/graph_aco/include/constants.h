@@ -13,6 +13,8 @@
 #define HASH_KEY1_SZ 10
 #define HASH_KEY2_SZ 100
 
+#define PHEROMONE_KEY_SZ HASH_KEY1_SZ*HASH_KEY2_SZ
+
 // NOTE: Key1 = robPos%HASH_KEY1_SZ
 // 		 Key2 = sum(vPos)%HASH_KEY2_SZ
 

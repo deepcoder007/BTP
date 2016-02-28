@@ -1,0 +1,129 @@
+/*
+ * configGraph.cpp
+ *
+ *  Created on: 21-Feb-2016
+ *      Author: vibhanshu
+ */
+
+#include<cmath>
+#include"Graph.h"
+#include"commons.h"
+#include"constants.h"
+#include"configGraph.h"
+#include"configNode.h"
+#include"configNodeStorage.h"
+#include"configNodeIterator.h"
+
+configGraph::configGraph(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)  {
+	base = stor->getConfigNode(g,rPos,vLen,vPos);
+}
+
+bool configGraph::isGPU() {
+	return false;
+}
+
+edgeType configGraph::adjacent(configNode* a,configNode* b) {
+
+	if( a->cntVacant() == b->cntVacant() )  // Check if there is an internal edge  [INTERNAL]
+	{
+		// first check if robotPos is different
+		bool flag = false; // if it becomes true then rPos is not changed
+		if( a->getRobotPos() == b->getRobotPos() )
+			flag = true;  // robo position not changed
+		if( flag == false && a->cntVacant() != b->cntVacant() ) {
+			// i.e. if robot position changed and there are different vacancies, an unlikely case for edge
+			return NONE;
+		}
+		int nodeCount = a->cntNodes();
+		// now verify for each node
+		int p1 = -1 ,p2 = -1;  // mark the position of the nodes where they are different
+		int i;
+		int cntr = 0 ;   	   // count the number of nodes over which they are different
+		register bool v1 , v2;
+		for( i=1 ; i<=nodeCount ; i++ )
+		{
+			v1 = a->isVacant(i);
+			v2 = b->isVacant(i);
+			if( v1 != v2 ) {
+				cntr++;
+				if( v1 == false )  // a has obstacle at position i
+					p1 = i ;
+				else if( v2 == false )  // b has obstacle at position i
+					p2 = i ;
+			}
+		}
+		if( cntr != 2 )
+			return NONE;
+		if( p1!=-1 && p2!=-1 )
+			return INTERNAL;
+		else
+			return NONE;   // because there is only one type of edge
+	} else {			  // check the case if the edge is from one layer to another [EXTERNAL]
+
+		// Check if are adjacent nodes in different layer, if not no edge is possible
+		// NOTE: The link will always be from node with higher vacant nodes to lower vacant nodes.
+		if( a->getRobotPos() != b->getRobotPos() || (a->cntVacant()-b->cntVacant())!=1 )
+			return NONE;
+
+		int cntr = 0;   		// count how many pos are different
+		int p1 = -1 ; 		// the location where configNode are different
+		int nodeCount = a->cntNodes();
+		int i;
+		for( i=1 ; i<=nodeCount ; i++ ) {
+			if( a->isVacant(i) != b->isVacant(i) ) {   // if position i is dissimilar in the 2 nodes
+				p1 = i;		  // the node where there is a change
+				cntr ++; 	  // counter for the number of changes
+			}
+		}
+		if( cntr!=1 )  // diff at more then 1 position
+			return NONE;
+		else
+			return EXTERNAL;
+	}
+}
+
+/*
+ *  	Get neighbors on the same layer
+ */
+set<configNode*> configGraph::getNeighbors(configNode* a) {
+
+	set<configNode*> out; 			// the output that will be sent
+	int pos,i,j,k;
+	Graph* gPtr = a->getGraph();
+	int cntNodes = gPtr->cntNodes();   // number of nodes in the graph
+	int* vPos1 = new int[cntNodes/INT_BIT_SZ+1];   // Arrays to store the vacant length
+	int* vPos2 = new int[cntNodes/INT_BIT_SZ+1];
+	vector<int> vTmp;
+	vector<int>::iterator vit;
+	for( i=1 ; i<=cntNodes ; i++ ) {
+		if( a->isVacant(i) == true )
+		{
+			j = i/INT_BIT_SZ;
+			k = i%INT_BIT_SZ;
+			vPos1[j] += (1<<k);
+		}
+	}
+
+	// 1. add all the neighboring configurations formed by moving the robot
+	pos = a->getRobotPos();
+	vTmp = gPtr->neighbors(pos);    // neighbors of the robot pos
+	for( vit = vTmp.begin() ; vit!=vTmp.end(); vit++ ) {
+		if( a->isVacant(*vit) ) {
+			// if this is vacant , moving robot to this position is a valid neighborhood
+			out.insert( a->robotMove(*vit) );
+		}
+	}
+
+	// 2. add all the neighboring configurations formed by moving obstacles
+	for( i=1 ; i<=cntNodes ; i++ )  // across all the nodes
+	{
+		if( !a->isVacant(i) )    // if only there is an obstacle
+		{
+			vTmp = gPtr->neighbors(i);  // all the neighbors of (i)
+			for( vit = vTmp.begin(); vit!=vTmp.end() ;vit ++ )
+			{
+				if( a->isVacant(*vit) )  // if obstacles at (i) can be moved to (*vit)
+			}
+		}
+	}
+}

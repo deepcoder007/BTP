@@ -21,6 +21,7 @@ public:
     virtual bool isVacant(int pos)=0;       // returns the vacancy status
     virtual int cntVacant()=0;              // Returns the number of vacant nodes,also tells the layer in which the current node is
     virtual int cntNodes()=0;
+    virtual Graph* getGraph()=0;			// Returns the underlying graph
 
     // Edit configuration -> returns a new configuration after this operation
     // When move is not possible , returns a NULL
@@ -50,6 +51,7 @@ public:
     bool isVacant(int pos);       // returns the vacancy status
     int cntVacant();              // Returns the number of vacant nodes,also tells the layer in which the current node is
     int cntNodes();    // CAUTION: Assumption that nodes in seq [1,..,n]
+    Graph* getGraph();
 
     configNode* robotMove(int pos2);   // moves the robot
     configNode* obsMove(int pos1,int pos2);    // moves the obstacle

@@ -7,24 +7,16 @@
 
 
 #include"first.h"
-
-struct s
-{
-	int a[100];
-};
+#define K1 10
+#define K2 24
+#define K3 K1*K2
 
 int main()
 {
-	cout<<"Hello World"<<endl;
-	int a;
-	float b;
-	double c;
-	s ss;
-	cout<<sizeof(&a)<<endl;
-	cout<<sizeof(&b)<<endl;
-	cout<<sizeof(&c)<<endl;
-	cout<<sizeof(ss)<<endl;
-	cout<<sizeof(&ss)<<endl;
+
+	cout<<"K1 "<<K1<<endl;
+	cout<<"K2 "<<K2<<endl;
+	cout<<"K3 "<<K3<<endl;
 	return 0;
 }
 

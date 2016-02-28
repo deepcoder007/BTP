@@ -44,7 +44,7 @@ configNode::~configNode()
 configNodeNaive::configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
 {
 	int tmp = g->cntNodes()/INT_BIT_SZ + 1 ;
-	if( vacant_length < tmp ) {  // not allocated enough space to vPos
+	if( vLen < tmp ) {  // not allocated enough space to vPos
 		cout<<"[ERROR]: Not enough memory allocated for storing vacant array"<<endl;
 	}
     vacant_length = vLen;
@@ -108,6 +108,10 @@ int configNodeNaive::cntVacant()
 // Returns the number of nodes in the underlying graph
 int configNodeNaive::cntNodes() {
 	return g_ptr->cntNodes();
+}
+
+Graph* configNodeNaive::getGraph() {
+	return g_ptr;
 }
 
 /*

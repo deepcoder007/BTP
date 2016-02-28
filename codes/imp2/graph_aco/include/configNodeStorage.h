@@ -29,7 +29,6 @@ class linkList;
 class configNodeStorage
 {
 public:
-//    configNodeStorage(Graph* g);
     virtual ~configNodeStorage();
     virtual bool isGPU()=0;
     virtual configNode* getConfigNode(Graph* g,int rPos,int len,int* vPos)=0;
@@ -38,7 +37,8 @@ public:
     virtual int getCount()=0;	// no. of nodes stored
 
     // CAUTION: potentially dangerous routines
-    void clear();
+    virtual void clear();
+    virtual void gc();     			    // Garbage Collector: remove the old nodes from the cache
 };
 
 // The serial implementation of the configNodeStorage construct
@@ -59,6 +59,7 @@ public:
 
     // CAUTION: potentially dangerous routines
     void clear();
+    void gc();
 };
 
 // The GPU implementation of the configNodeStorage

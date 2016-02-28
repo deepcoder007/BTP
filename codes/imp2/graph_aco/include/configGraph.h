@@ -12,17 +12,15 @@
 #include"commons.h"
 #include"constants.h"
 #include<vector>
+#include<set>
 
 class configGraph
 {
-private:
-	configNode* base;
 public:
-    configGraph(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor);
+    configGraph();
     bool isGPU();
     edgeType adjacent(configNode* a,configNode* b);   // tells if a->b is a valid edge
-    vector<configNode*> getNeighbors(configNode* a);   // returns the list of neighbours of a
-
+    set<configNode*> getNeighbors(configNode* a);   // returns the list of neighbours of a
 };
 
 

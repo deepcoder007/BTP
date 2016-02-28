@@ -21,6 +21,7 @@
 #include"configNodeIterator.h"
 #include"configNode.h"
 #include"configNodeStorage.h"
+#include"configGraph.h"
 using namespace std;
 
 class configNodeNaive;
@@ -35,29 +36,37 @@ int main()
 
 	int conf;   // we need only 1 int for this sample config
 	conf += (1<<1);
-	conf += (1<<4);
 	conf += (1<<2);
 	conf += (1<<3);
+	conf += (1<<4);
 	configNode* tmp2,*tmp1,*tmp3,*tmp4;
 
-	tmp2 = stor.getConfigNode(&g,1,1,&conf);
-	tmp2 = stor.getConfigNode(&g,1,1,&conf);
-	tmp2 = stor.getConfigNode(&g,1,1,&conf);
-	cout<<"ROBO pos :"<<tmp2->getRobotPos()<<endl;
-	tmp1 = tmp2->robotMove(4);
-	cout<<"ROBO pos :"<<tmp1->getRobotPos()<<endl;
+	tmp1 = stor.getConfigNode(&g,1,1,&conf);
+	tmp1 = stor.getConfigNode(&g,1,1,&conf);
+	tmp1 = stor.getConfigNode(&g,1,1,&conf);
+	tmp2 = tmp1->robotMove(4);
 	tmp3 = tmp1->robotMove(3);
-	cout<<"ROBO pos :"<<tmp3->getRobotPos()<<endl;
 	tmp4 = tmp3->robotMove(2);
-	cout<<"ROBO pos :"<<tmp4->getRobotPos()<<endl;
-	stor.clear();
-	if( tmp4 ==  NULL )
-		cout<<" It is NULL "<<endl;
-	else
-		cout<<" It is not NULL "<<endl;
 	cout<<"Number of stored nodes : "<<stor.getCount()<<endl;
 
-//	delete tmpNode;
+	cout<<"tmp1 address :"<<tmp1<<endl;
+	cout<<"tmp2 address :"<<tmp2<<endl;
+	cout<<"tmp3 address :"<<tmp3<<endl;
+	cout<<"tmp4 address :"<<tmp4<<endl;
+	cout<<endl;
+
+	configGraph BigGraph;
+	set<configNode*> neighbors;
+
+	neighbors = BigGraph.getNeighbors(tmp1);
+	cout<<"no. of neighbors of tmp1 = "<<neighbors.size()<<endl;
+	neighbors = BigGraph.getNeighbors(tmp2);
+	cout<<"no. of neighbors of tmp2 = "<<neighbors.size()<<endl;
+	neighbors = BigGraph.getNeighbors(tmp3);
+	cout<<"no. of neighbors of tmp3 = "<<neighbors.size()<<endl;
+	neighbors = BigGraph.getNeighbors(tmp4);
+	cout<<"no. of neighbors of tmp4 = "<<neighbors.size()<<endl;
+
 	return 0;
 }
 
