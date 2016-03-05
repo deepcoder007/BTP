@@ -1,6 +1,22 @@
-16:02:18 **** Incremental Build of configuration Debug for project graph_aco ****
+19:06:57 **** Incremental Build of configuration Debug for project graph_aco ****
 make all 
-make: Nothing to be done for `all'.
+Building file: ../src/tmpSrc.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
+../src/tmpSrc.cpp: In function ‘int main()’:
+../src/tmpSrc.cpp:42:14: warning: variable ‘tmp2’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4,*tmp[10];
+              ^
+../src/tmpSrc.cpp:42:32: warning: variable ‘tmp4’ set but not used [-Wunused-but-set-variable]
+  configNode* tmp2,*tmp1,*tmp3,*tmp4,*tmp[10];
+                                ^
+Finished building: ../src/tmpSrc.cpp
+ 
+Building target: graph_aco
+Invoking: Cross G++ Linker
+g++  -o "graph_aco"  ./src/ACO.o ./src/Graph.o ./src/commons.o ./src/configGraph.o ./src/configNode.o ./src/configNodeIterator.o ./src/configNodeStorage.o ./src/genGraph.o ./src/pheromones.o ./src/tmpSrc.o   
+Finished building target: graph_aco
+ 
 
-16:02:18 Build Finished (took 69ms)
+19:06:57 Build Finished (took 468ms)
 

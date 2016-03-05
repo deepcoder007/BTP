@@ -43,6 +43,7 @@ configNode::~configNode()
  */
 configNodeNaive::configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
 {
+	this->pheromoneQty = -1;       // Negative value means invalid
 	int tmp = g->cntNodes()/INT_BIT_SZ + 1 ;
 	if( vLen < tmp ) {  // not allocated enough space to vPos
 		cout<<"[ERROR]: Not enough memory allocated for storing vacant array"<<endl;
@@ -50,7 +51,6 @@ configNodeNaive::configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNode
     vacant_length = vLen;
     vacant = new int[vacant_length];
     roboPos = rPos;
-    g_ptr = g;
     storage = stor;
     memcpy(vacant,vPos,sizeof(int)*vacant_length);
     // Check if the robot pos is marked vacant
@@ -78,7 +78,6 @@ configNodeNaive::configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNode
 // For permanently removing the configNode
 configNodeNaive::~configNodeNaive()
 {
-    g_ptr = NULL;
     delete[] vacant;
     storage = NULL;
 }
@@ -107,11 +106,11 @@ int configNodeNaive::cntVacant()
 
 // Returns the number of nodes in the underlying graph
 int configNodeNaive::cntNodes() {
-	return g_ptr->cntNodes();
+	return this->storage->getGraph()->cntNodes();
 }
 
 Graph* configNodeNaive::getGraph() {
-	return g_ptr;
+	return this->storage->getGraph();
 }
 
 /*
@@ -122,10 +121,10 @@ Graph* configNodeNaive::getGraph() {
  */
 configNode* configNodeNaive::robotMove(int pos2)
 {
-    if( g_ptr->isConnected(roboPos,pos2) && isVacant(pos2) ) {
+	if( this->storage->getGraph()->isConnected(roboPos,pos2) && isVacant(pos2)  ) {
     	int* tmpArr=new int[vacant_length];
     	memcpy(tmpArr,vacant,sizeof(int)*vacant_length);
-    	configNode* tmpNode = storage->getConfigNode(g_ptr,pos2,vacant_length,vacant);
+    	configNode* tmpNode = storage->getConfigNode(this->storage->getGraph(),pos2,vacant_length,vacant);
 		delete[] tmpArr;
     	return tmpNode;
     } else {
@@ -139,9 +138,12 @@ configNode* configNodeNaive::robotMove(int pos2)
  */
 configNode* configNodeNaive::obsMove(int pos1,int pos2)
 {
+	cout<<endl<<endl;
+	cout<<"[143:configNode.cpp] :pos 1,2 : "<<pos1<<" : "<<pos2<<endl;
+	cout<<endl<<endl;
 	// check if (pos1->pos2) , if pos2 is vacant and pos1
 	// is filled simultaneously
-    if( g_ptr->isConnected(pos1,pos2) &&
+	if( this->storage->getGraph()->isConnected(pos1,pos2) &&
     		isVacant(pos2) && !isVacant(pos1) )
     {
     	int* tmpArr=new int[vacant_length];
@@ -149,11 +151,11 @@ configNode* configNodeNaive::obsMove(int pos1,int pos2)
     	int i,j;
     	i = pos1 / INT_BIT_SZ;
     	j = pos1 % INT_BIT_SZ;
-    	tmpArr[i] = (tmpArr[i] & ~(1<<j));
+    	tmpArr[i] = (tmpArr[i] | (1<<j));
     	i = pos2 / INT_BIT_SZ;
     	j = pos2 % INT_BIT_SZ;
-    	tmpArr[i] = (tmpArr[i] | (1<<j));
-    	configNode* tmpNode = storage->getConfigNode(g_ptr,roboPos,vacant_length,tmpArr);
+    	tmpArr[i] = (tmpArr[i] & ~(1<<j));
+    	configNode* tmpNode = storage->getConfigNode(this->storage->getGraph(),roboPos,vacant_length,tmpArr);
     	delete[] tmpArr;
     	return tmpNode;
     } else {
@@ -161,8 +163,56 @@ configNode* configNodeNaive::obsMove(int pos1,int pos2)
     }
 }
 
+// Returns the list of neighbors of the current node
+set<configNode*> configNodeNaive::getNeighbors() {
+
+	set<configNode*> out;
+	Graph* g = storage->getGraph();   				// temporarily for calculation
+	vector<int> vTmp = g->neighbors(this->roboPos); // the neighbors of current robot
+	vector<int>::iterator vit;
+
+	// Insert the movement of the robots
+	for( vit=vTmp.begin() ; vit!=vTmp.end() ; vit++ ) {
+		if( this->isVacant(*vit) )
+			out.insert(this->robotMove(*vit) );
+	}
+
+	// Insert the movement of the obstacles
+
+	// First generate the set of obstacles
+	set<int> nodes = g->getNodes();
+	set<int>::iterator sit;
+	// for all the nodes in the graph
+	for( sit = nodes.begin() ; sit!=nodes.end() ; sit++ ) {
+		// check if *sit is an obstacle
+		if( !this->isVacant(*sit) ) {
+			// push all the possible movements to out
+			vTmp = g->neighbors(*sit);
+			for( vit = vTmp.begin() ; vit!=vTmp.end() ; vit++ ) {
+				if( this->isVacant(*vit) ) {
+					out.insert(this->obsMove(*sit,*vit));
+				}
+			}
+		}
+	}
+	return out;
+
+}
+
 // Returns the 2D key of the current node
 key_ii configNodeNaive::getCode()
 {
 	return this->key;
+}
+
+/*
+ * Functions for pheromone quantity
+ * These functions will be used in ACO module for algo.
+ */
+void configNodeNaive::setPheromone(double qty) {
+	this->pheromoneQty = qty;
+}
+
+double configNodeNaive::getPheromone() {
+	return this->pheromoneQty;
 }

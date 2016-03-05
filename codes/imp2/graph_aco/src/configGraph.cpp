@@ -26,6 +26,8 @@ bool configGraph::isGPU() {
 
 edgeType configGraph::adjacent(configNode* a,configNode* b) {
 
+	if( a== NULL || b == NULL )
+		return NONE;
 	if( a->cntVacant() == b->cntVacant() )  // Check if there is an internal edge  [INTERNAL]
 	{
 		// first check if robotPos is different
@@ -93,6 +95,8 @@ edgeType configGraph::adjacent(configNode* a,configNode* b) {
 set<configNode*> configGraph::getNeighbors(configNode* a) {
 
 	set<configNode*> out; 			// the output that will be sent
+	if( a == NULL )
+		return out;
 	int pos,i,j,k;
 	Graph* gPtr = a->getGraph();
 	int cntNodes = gPtr->cntNodes();   // number of nodes in the graph

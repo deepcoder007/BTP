@@ -1,0 +1,18 @@
+/*
+ * pheromones.cpp
+ *
+ *  Created on: 25-Feb-2016
+ *      Author: vibhanshu
+ */
+
+#include"pheromones.h"
+using namespace std;
+
+
+pheromoneCPUEdge::pheromoneCPUEdge() {
+	// Trivial as of now
+}
+
+pheromoneCPUVertex::pheromoneCPUVertex() {
+	// Trivial as of now
+}

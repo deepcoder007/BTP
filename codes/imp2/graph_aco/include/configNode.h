@@ -2,6 +2,7 @@
 #define CONFIGNODE_H
 
 #include<string>
+#include<set>
 #include"constants.h"
 #include"commons.h"
 using namespace std;
@@ -27,9 +28,13 @@ public:
     // When move is not possible , returns a NULL
     virtual configNode* robotMove(int pos2)=0;   // moves the robot
     virtual configNode* obsMove(int pos1,int pos2)=0;    // moves the obstacle
-
+    virtual set<configNode*> getNeighbors()=0;			 // Return the neighbor of this configNode
     // A key , the key is a 2D object
     virtual key_ii getCode()=0;             // Returns a unique string key for config
+
+    // pheromone content
+    virtual void setPheromone(double qty)=0;
+    virtual double getPheromone()=0;
 };
 
 /* Serial implementation of the config node class */
@@ -39,10 +44,11 @@ private:
     int vacant_length; // length of the array vacant
     int* vacant;
     int roboPos;
-    Graph* g_ptr;      // The pointer to the original graph
+//    Graph* g_ptr;     Deprecated  // The pointer to the original graph
     key_ii key;         // The key of this configuration
     int vacCnt;
     configNodeStorage* storage;  // The storage struct used
+    double pheromoneQty ;	     // The quantity of pheromone
 public:
     configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor);     // initialize the confignode acc. to this graph
     ~configNodeNaive();
@@ -55,8 +61,12 @@ public:
 
     configNode* robotMove(int pos2);   // moves the robot
     configNode* obsMove(int pos1,int pos2);    // moves the obstacle
+    set<configNode*> getNeighbors();			 // Return the neighbor of this configNode
 
     key_ii getCode();             // Returns a unique string key for config
+
+    void setPheromone(double qty);
+    double getPheromone();
 };
 
 // TODO: Algo design the GPU version of the configNode to make the other operations GPU-to-GPU

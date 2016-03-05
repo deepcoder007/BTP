@@ -48,6 +48,10 @@ configNodeStorageNaive::~configNodeStorageNaive()
             delete dt[i][j];
 }
 
+Graph* configNodeStorageNaive::getGraph() {
+	return this->graph;
+}
+
 bool configNodeStorageNaive::isGPU()
 {
     return false;
@@ -121,7 +125,6 @@ bool configNodeStorageNaive::deleteConfigNode(configNode* ptr)
 	key.first = (ptr->getRobotPos() % HASH_KEY1_SZ);
 	int n = ptr->cntNodes();
 
-	// TODO: Edit code below
 	int tmp=0;			// A temporary variable
 	for( int i=1;i<=n;i++ )	{
 		if( ptr->isVacant(i)   ) {
@@ -178,4 +181,10 @@ void configNodeStorageNaive::clear()
 		for( j=0 ; j<HASH_KEY2_SZ; j++ )
 			dt[i][j]->deleteAll();
 	count = 0;
+}
+
+
+// TODO: design the garbage collector for the nodes
+void configNodeStorageNaive::gc() {
+	// Trivial as of now
 }

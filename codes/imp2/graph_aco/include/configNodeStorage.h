@@ -30,6 +30,7 @@ class configNodeStorage
 {
 public:
     virtual ~configNodeStorage();
+    virtual Graph* getGraph()=0;
     virtual bool isGPU()=0;
     virtual configNode* getConfigNode(Graph* g,int rPos,int len,int* vPos)=0;
     virtual bool deleteConfigNode(configNode* ptr)=0;       // Deletes this configNode from the structure
@@ -37,8 +38,8 @@ public:
     virtual int getCount()=0;	// no. of nodes stored
 
     // CAUTION: potentially dangerous routines
-    virtual void clear();
-    virtual void gc();     			    // Garbage Collector: remove the old nodes from the cache
+    virtual void clear()=0;
+    virtual void gc()=0;     			    // Garbage Collector: remove the old nodes from the cache
 };
 
 // The serial implementation of the configNodeStorage construct
@@ -51,13 +52,14 @@ private:
 public:
     configNodeStorageNaive(Graph* g);
     ~configNodeStorageNaive();
+    Graph* getGraph();
     bool isGPU();
     configNode* getConfigNode(Graph* g,int rPos,int len,int* vPos); // preferably use this function
     bool deleteConfigNode(configNode* ptr);
     configNodeIterator* getNodesByKey(key_ii key); // in this case a listNodeIt.
     int getCount();
 
-    // CAUTION: potentially dangerous routines
+    // CAUTION: potentially dangerous routines, will have performance impact
     void clear();
     void gc();
 };

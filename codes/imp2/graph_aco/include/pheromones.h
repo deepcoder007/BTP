@@ -11,35 +11,6 @@
 #ifndef INCLUDE_PHEROMONES_H_
 #define INCLUDE_PHEROMONES_H_
 
-// Useful key in this file : PHEROMONE_KEY_SZ
-
-/*
- * This is an interface
- */
-class pheromoneStore
-{
-public:
-	virtual ~pheromoneStore();
-	virtual void setPheromoneQty(configNode* from,configNode* to)=0;  // On the edges
-	virtual void setPheromoneQty(configNode* node)=0;				  // On the node
-	virtual double getPheromoneQty(configNode* from,configNode* to)=0;	// On the edges
-	virtual double getPheromoneQty(configNode* node)=0;					// On the node
-};
-
-// TODO: Design this architecture
-class pheromoneCPUEdge : public pheromoneStore
-{
-public:
-	pheromoneCPUEdge();
-
-};
-
-class pheromoneCPUVertex : public pheromoneStore
-{
-public:
-	pheromoneCPUVertex();
-
-};
 
 
 

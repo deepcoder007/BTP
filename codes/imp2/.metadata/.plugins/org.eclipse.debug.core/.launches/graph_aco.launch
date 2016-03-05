@@ -32,5 +32,6 @@
 <booleanAttribute key="org.eclipse.linuxtools.internal.perf.attr.ShowStat" value="false"/>
 <booleanAttribute key="org.eclipse.linuxtools.internal.perf.attr.SourceLineNumbers" value="true"/>
 <intAttribute key="org.eclipse.linuxtools.internal.perf.attr.StatRunCount" value="1"/>
+<stringAttribute key="process_factory_id" value="org.eclipse.cdt.dsf.gdb.GdbProcessFactory"/>
 <stringAttribute key="provider" value="org.eclipse.linuxtools.perf.provider"/>
 </launchConfiguration>
