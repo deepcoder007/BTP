@@ -111,29 +111,77 @@ cpuNaive/fast:
 	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/build
 .PHONY : cpuNaive/fast
 
-src/cpuNaive.o: src/cpuNaive.cpp.o
-.PHONY : src/cpuNaive.o
+src/Graph.o: src/Graph.cpp.o
+.PHONY : src/Graph.o
 
 # target to build an object file
-src/cpuNaive.cpp.o:
-	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/src/cpuNaive.cpp.o
-.PHONY : src/cpuNaive.cpp.o
+src/Graph.cpp.o:
+	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/src/Graph.cpp.o
+.PHONY : src/Graph.cpp.o
 
-src/cpuNaive.i: src/cpuNaive.cpp.i
-.PHONY : src/cpuNaive.i
+src/Graph.i: src/Graph.cpp.i
+.PHONY : src/Graph.i
 
 # target to preprocess a source file
-src/cpuNaive.cpp.i:
-	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/src/cpuNaive.cpp.i
-.PHONY : src/cpuNaive.cpp.i
+src/Graph.cpp.i:
+	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/src/Graph.cpp.i
+.PHONY : src/Graph.cpp.i
 
-src/cpuNaive.s: src/cpuNaive.cpp.s
-.PHONY : src/cpuNaive.s
+src/Graph.s: src/Graph.cpp.s
+.PHONY : src/Graph.s
 
 # target to generate assembly for a file
-src/cpuNaive.cpp.s:
-	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/src/cpuNaive.cpp.s
-.PHONY : src/cpuNaive.cpp.s
+src/Graph.cpp.s:
+	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/src/Graph.cpp.s
+.PHONY : src/Graph.cpp.s
+
+src/keyValueStore.o: src/keyValueStore.cpp.o
+.PHONY : src/keyValueStore.o
+
+# target to build an object file
+src/keyValueStore.cpp.o:
+	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/src/keyValueStore.cpp.o
+.PHONY : src/keyValueStore.cpp.o
+
+src/keyValueStore.i: src/keyValueStore.cpp.i
+.PHONY : src/keyValueStore.i
+
+# target to preprocess a source file
+src/keyValueStore.cpp.i:
+	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/src/keyValueStore.cpp.i
+.PHONY : src/keyValueStore.cpp.i
+
+src/keyValueStore.s: src/keyValueStore.cpp.s
+.PHONY : src/keyValueStore.s
+
+# target to generate assembly for a file
+src/keyValueStore.cpp.s:
+	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/src/keyValueStore.cpp.s
+.PHONY : src/keyValueStore.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -144,9 +192,15 @@ help:
 	@echo "... cpuNaive"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... src/cpuNaive.o"
-	@echo "... src/cpuNaive.i"
-	@echo "... src/cpuNaive.s"
+	@echo "... src/Graph.o"
+	@echo "... src/Graph.i"
+	@echo "... src/Graph.s"
+	@echo "... src/keyValueStore.o"
+	@echo "... src/keyValueStore.i"
+	@echo "... src/keyValueStore.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

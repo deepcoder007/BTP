@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /media/vibhanshu/work/serious/BTP/codes/cpuNaive
 CMakeFiles/cpuNaive.dir/all:
 	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/depend
 	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles  1 2 3
 	@echo "Built target cpuNaive"
 .PHONY : CMakeFiles/cpuNaive.dir/all
 
@@ -69,7 +69,7 @@ all: CMakeFiles/cpuNaive.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/cpuNaive.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cpuNaive.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles 0
 .PHONY : CMakeFiles/cpuNaive.dir/rule

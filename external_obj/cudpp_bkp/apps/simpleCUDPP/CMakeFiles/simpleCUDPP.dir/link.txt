@@ -1,1 +1,0 @@
-/usr/bin/c++       CMakeFiles/simpleCUDPP.dir/scan_gold.cpp.o CMakeFiles/simpleCUDPP.dir/./simpleCUDPP_generated_simpleCUDPP.cu.o  -o simpleCUDPP  -L/home/student/vibhanshu/cuda/cudpp/apps/simpleCUDPP/../../lib -rdynamic /usr/local/cuda-6.5/lib64/libcudart.so -lcudpp -Wl,-rpath,/home/student/vibhanshu/cuda/cudpp/apps/simpleCUDPP/../../lib:/usr/local/cuda-6.5/lib64 

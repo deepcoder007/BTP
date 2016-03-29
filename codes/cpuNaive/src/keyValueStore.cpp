@@ -25,7 +25,7 @@ float keyValueStore::getValue(PKEY key) {
 }
 
 void keyValueStore::setValue(PKEY key,float val) {
-    pheor[key]=val;
+    phero[key]=val;
 }
 
 bool keyValueStore::keyExist(PKEY key) {
