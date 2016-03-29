@@ -1,9 +1,15 @@
-#include"../include/Graph.h"
+#include"Graph.h"
 #include<string>
 #include<fstream>
 #include<vector>
 #include<set>
 #include<sstream>
+#include<cassert>
+#include<iostream>
+#include<cstdio>
+#include<cstdlib>
+#include<unistd.h>
+using namespace std;
 
 // Function to split the string by the given delimiter
 vector<string> split(string str, char delimiter=' ') {
@@ -105,7 +111,8 @@ void Graph::readFromFile(string name) {
    memset(grid, 0, sizeof(grid) );
    string line;
    int a,b;
-   ifstream infile("../data/"+name);
+   cout<<"file : "<<"data/"+name<<endl;
+   ifstream infile("data/"+name);
    while( getline(infile, line) ) {
        vector<string> data = split(line,','); 
        a = atoi(data[0].c_str());
@@ -117,6 +124,25 @@ void Graph::readFromFile(string name) {
        // for unweighted directed graph;
        grid[a][b] = 1; 
    }
+
+#ifdef DEBUG
+    cout<<" Printing the read graph : "<<endl;
+    cout<<" Number of nodes  : "<<n<<endl;
+    int i,j,k;
+    k=0;
+    cout<<k<<" | ";
+    for( j=1 ; j<=n ; j++ )
+        cout<<j<<" | ";
+    cout<<endl;
+    for( i=1 ; i<=n ; i++ ) {
+        cout<<++k<<" | ";
+        for( j=1 ; j<=n ; j++ ) {
+            cout<<grid[i][j]<<" | ";
+        }
+        cout<<endl;
+    }
+
+#endif
 }
 
 /*
@@ -215,3 +241,18 @@ bool Graph::setPhero(CONF conf1, CONF conf2, float value) {
     PKEY key = storage.getKey(conf1,conf2);
     storage.setValue(key,value);
 }
+
+/*
+    Returns the number of nodes in the graph
+*/
+int Graph::getNodeCnt() {
+    return n;
+}
+
+/*
+    returns the size of the underlying key-value store
+*/
+int Graph::containerSize() {
+    return storage.getSize();
+}
+

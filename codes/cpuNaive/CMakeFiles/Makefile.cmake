@@ -39,5 +39,6 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/cpuNaive.dir/DependInfo.cmake"
+  "CMakeFiles/CPUNAIVE.dir/DependInfo.cmake"
+  "CMakeFiles/regression.dir/DependInfo.cmake"
   )

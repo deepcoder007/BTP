@@ -53,38 +53,73 @@ CMAKE_SOURCE_DIR = /media/vibhanshu/work/serious/BTP/codes/cpuNaive
 CMAKE_BINARY_DIR = /media/vibhanshu/work/serious/BTP/codes/cpuNaive
 
 #=============================================================================
-# Target rules for target CMakeFiles/cpuNaive.dir
+# Target rules for target CMakeFiles/CPUNAIVE.dir
 
 # All Build rule for target.
-CMakeFiles/cpuNaive.dir/all:
-	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/depend
-	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/build
+CMakeFiles/CPUNAIVE.dir/all:
+	$(MAKE) -f CMakeFiles/CPUNAIVE.dir/build.make CMakeFiles/CPUNAIVE.dir/depend
+	$(MAKE) -f CMakeFiles/CPUNAIVE.dir/build.make CMakeFiles/CPUNAIVE.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles  1 2 3
-	@echo "Built target cpuNaive"
-.PHONY : CMakeFiles/cpuNaive.dir/all
+	@echo "Built target CPUNAIVE"
+.PHONY : CMakeFiles/CPUNAIVE.dir/all
 
 # Include target in all.
-all: CMakeFiles/cpuNaive.dir/all
+all: CMakeFiles/CPUNAIVE.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/cpuNaive.dir/rule: cmake_check_build_system
+CMakeFiles/CPUNAIVE.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cpuNaive.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CPUNAIVE.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles 0
-.PHONY : CMakeFiles/cpuNaive.dir/rule
+.PHONY : CMakeFiles/CPUNAIVE.dir/rule
 
 # Convenience name for target.
-cpuNaive: CMakeFiles/cpuNaive.dir/rule
-.PHONY : cpuNaive
+CPUNAIVE: CMakeFiles/CPUNAIVE.dir/rule
+.PHONY : CPUNAIVE
 
 # clean rule for target.
-CMakeFiles/cpuNaive.dir/clean:
-	$(MAKE) -f CMakeFiles/cpuNaive.dir/build.make CMakeFiles/cpuNaive.dir/clean
-.PHONY : CMakeFiles/cpuNaive.dir/clean
+CMakeFiles/CPUNAIVE.dir/clean:
+	$(MAKE) -f CMakeFiles/CPUNAIVE.dir/build.make CMakeFiles/CPUNAIVE.dir/clean
+.PHONY : CMakeFiles/CPUNAIVE.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/cpuNaive.dir/clean
+clean: CMakeFiles/CPUNAIVE.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/regression.dir
+
+# All Build rule for target.
+CMakeFiles/regression.dir/all:
+	$(MAKE) -f CMakeFiles/regression.dir/build.make CMakeFiles/regression.dir/depend
+	$(MAKE) -f CMakeFiles/regression.dir/build.make CMakeFiles/regression.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles  4 5 6 7
+	@echo "Built target regression"
+.PHONY : CMakeFiles/regression.dir/all
+
+# Include target in all.
+all: CMakeFiles/regression.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/regression.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/regression.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles 0
+.PHONY : CMakeFiles/regression.dir/rule
+
+# Convenience name for target.
+regression: CMakeFiles/regression.dir/rule
+.PHONY : regression
+
+# clean rule for target.
+CMakeFiles/regression.dir/clean:
+	$(MAKE) -f CMakeFiles/regression.dir/build.make CMakeFiles/regression.dir/clean
+.PHONY : CMakeFiles/regression.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/regression.dir/clean
 .PHONY : clean
 
 #=============================================================================

@@ -7,7 +7,7 @@
 using namespace std;
 
 
-#define KEY_SZ  2   
+#define KEY_SZ  4   
 #define INT_SZ 30
 
 typedef array<int,KEY_SZ> CONF;     
@@ -24,6 +24,7 @@ public:
     bool keyExist(PKEY key);
 
     PKEY getKey(CONF a,CONF b); // returns a config from these 2 elements
+    int getSize();           // returns the number of keys in container
 };
 
 

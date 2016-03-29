@@ -9,7 +9,7 @@
 #include<thread>
 #include<chrono>
 #include<unistd.h>
-#include"../include/keyValueStore.h"
+#include"keyValueStore.h"
 #define THD 4
 //#include"keyValueStore.h"
 using namespace std;
@@ -38,4 +38,8 @@ bool keyValueStore::keyExist(PKEY key) {
 
 PKEY keyValueStore::getKey(CONF a,CONF b) {
     return make_pair(a,b);
+}
+
+int keyValueStore::getSize() {
+    return phero.size();
 }

@@ -1,1 +1,2 @@
-/media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles/cpuNaive.dir
+/media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles/CPUNAIVE.dir
+/media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles/regression.dir
