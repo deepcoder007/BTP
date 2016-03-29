@@ -53,6 +53,13 @@ void Graph::readGraph(std::string path) {
         nodes.insert(a);
         nodes.insert(b);
     }
+    // insert the missing nodes in the graph
+    for(int i=1;i<=n;i++)
+    	if( g.find(i) == g.end() ) {
+    		nodes.insert(i);
+    		g[i]=set<int>();
+    	}
+
     // initialize the structure gv
     set<int>::iterator sit;
     set<int>::iterator sit2;

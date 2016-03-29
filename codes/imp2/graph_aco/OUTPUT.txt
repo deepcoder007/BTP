@@ -1,0 +1,75 @@
+Starting program
+[configGraph] : A new config Graph initialized 
+[configNodeStorage:72] START getConfigNode 
+No. of vacant : 270
+[configNodeStorage:88] here 
+[configNodeStorage:118] here 
+pointers : 2 : 9 : 0x847010
+[configNodeNaive:46] entering the routine 
+[configNodeStorage: 119] here 
+---------------------------------------------------------
+[configGraph:117] -> start moving the robot 
+[configGraph:123] -> Robot as position : 43
+[configNode:131]: Inside robotMove to : 43
+[configNodeStorage:72] START getConfigNode 
+No. of vacant : 263
+[configNodeStorage:88] here 
+[configNodeStorage:118] here 
+pointers : 43 : 9 : 0x8494e0
+[configNodeNaive:46] entering the routine 
+[configNodeStorage: 119] here 
+[configGraph:126] -> robot movement done : 43
+[configGraph:123] -> Robot as position : 69
+[configNode:131]: Inside robotMove to : 69
+[configNodeStorage:72] START getConfigNode 
+No. of vacant : 263
+[configNodeStorage:88] here 
+[configNodeStorage:118] here 
+pointers : 69 : 9 : 0x8494e0
+[configNodeNaive:46] entering the routine 
+[configNodeStorage: 119] here 
+[configGraph:126] -> robot movement done : 69
+[configGraph:123] -> Robot as position : 70
+[configNode:131]: Inside robotMove to : 70
+[configNodeStorage:72] START getConfigNode 
+No. of vacant : 263
+[configNodeStorage:88] here 
+[configNodeStorage:118] here 
+pointers : 70 : 9 : 0x8494e0
+[configNodeNaive:46] entering the routine 
+[configNodeStorage: 119] here 
+[configGraph:126] -> robot movement done : 70
+[configGraph:123] -> Robot as position : 93
+[configNode:131]: Inside robotMove to : 93
+[configNodeStorage:72] START getConfigNode 
+No. of vacant : 263
+[configNodeStorage:88] here 
+[configNodeStorage:91] here 
+[configNodeStorage:118] here 
+pointers : 93 : 9 : 0x8494e0
+[configNodeNaive:46] entering the routine 
+[configNodeStorage: 119] here 
+[configGraph:126] -> robot movement done : 93
+[configGraph:123] -> Robot as position : 112
+[configNode:131]: Inside robotMove to : 112
+[configNodeStorage:72] START getConfigNode 
+No. of vacant : 263
+[configNodeStorage:88] here 
+[configNodeStorage:118] here 
+pointers : 112 : 9 : 0x8494e0
+[configNodeNaive:46] entering the routine 
+[configNodeStorage: 119] here 
+[configGraph:126] -> robot movement done : 112
+[configGraph:123] -> Robot as position : 158
+[configNode:131]: Inside robotMove to : 158
+[configNodeStorage:72] START getConfigNode 
+No. of vacant : 263
+[configNodeStorage:88] here 
+[configNodeStorage:118] here 
+pointers : 158 : 9 : 0x8494e0
+[configNodeNaive:46] entering the routine 
+[configNodeStorage: 119] here 
+[configGraph:126] -> robot movement done : 158
+[configGraph:127] -> robot movement done obstacle move now 
+[configGraph:139] -> movement done, now returning the neighbors 
+-----------___TMP__END-----------------------------------

@@ -43,13 +43,14 @@ configNode::~configNode()
  */
 configNodeNaive::configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNodeStorage* stor)
 {
+	cout<<"[configNodeNaive:46] entering the routine "<<endl;
 	this->pheromoneQty = -1;       // Negative value means invalid
 	int tmp = g->cntNodes()/INT_BIT_SZ + 1 ;
 	if( vLen < tmp ) {  // not allocated enough space to vPos
 		cout<<"[ERROR]: Not enough memory allocated for storing vacant array"<<endl;
 	}
     vacant_length = vLen;
-    vacant = new int[vacant_length];
+    vacant = (int*)calloc(vacant_length,sizeof(int));
     roboPos = rPos;
     storage = stor;
     memcpy(vacant,vPos,sizeof(int)*vacant_length);
@@ -58,8 +59,14 @@ configNodeNaive::configNodeNaive(Graph* g,int rPos,int vLen,int* vPos,configNode
     i = rPos / INT_BIT_SZ;
     j = rPos % INT_BIT_SZ;
     if( (vacant[i] & (1<<j)) == 0  ) {
-    	cout<<"[ERROR]: position of robot must be vacant"<<endl;
+    	cout<<"[ERROR:configNode:61]: position of robot must be vacant"<<endl;
+    	cout<<"[LOG] :"<<endl;
+    	cout<<" rpos :  "<<this->roboPos<<endl;
     	cout<<i<<"  "<<j<<"  "<<vacant[i]<<endl;
+    	for(i=0;i<=vLen;i++) {
+    		cout<<vPos[i]<<" , ";
+    	}
+    	cout<<endl<<endl;
     }
 
     // calculate the key of the node
@@ -121,11 +128,12 @@ Graph* configNodeNaive::getGraph() {
  */
 configNode* configNodeNaive::robotMove(int pos2)
 {
+	cout<<"[configNode:131]: Inside robotMove to : "<<pos2<<endl;
 	if( this->storage->getGraph()->isConnected(roboPos,pos2) && isVacant(pos2)  ) {
-    	int* tmpArr=new int[vacant_length];
+		int* tmpArr=(int*)calloc(vacant_length,sizeof(int));
     	memcpy(tmpArr,vacant,sizeof(int)*vacant_length);
     	configNode* tmpNode = storage->getConfigNode(this->storage->getGraph(),pos2,vacant_length,vacant);
-		delete[] tmpArr;
+    	free(tmpArr);
     	return tmpNode;
     } else {
         return NULL;
@@ -138,15 +146,12 @@ configNode* configNodeNaive::robotMove(int pos2)
  */
 configNode* configNodeNaive::obsMove(int pos1,int pos2)
 {
-	cout<<endl<<endl;
-	cout<<"[143:configNode.cpp] :pos 1,2 : "<<pos1<<" : "<<pos2<<endl;
-	cout<<endl<<endl;
 	// check if (pos1->pos2) , if pos2 is vacant and pos1
 	// is filled simultaneously
 	if( this->storage->getGraph()->isConnected(pos1,pos2) &&
     		isVacant(pos2) && !isVacant(pos1) )
     {
-    	int* tmpArr=new int[vacant_length];
+		int* tmpArr=(int*)calloc(vacant_length,sizeof(int));
     	memcpy(tmpArr,vacant,sizeof(int)*vacant_length);
     	int i,j;
     	i = pos1 / INT_BIT_SZ;

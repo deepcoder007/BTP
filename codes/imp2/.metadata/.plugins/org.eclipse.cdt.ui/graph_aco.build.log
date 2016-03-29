@@ -1,16 +1,9 @@
-19:06:57 **** Incremental Build of configuration Debug for project graph_aco ****
+19:01:22 **** Incremental Build of configuration Debug for project graph_aco ****
 make all 
-Building file: ../src/tmpSrc.cpp
+Building file: ../src/configNode.cpp
 Invoking: Cross G++ Compiler
-g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/tmpSrc.d" -MT"src/tmpSrc.o" -o "src/tmpSrc.o" "../src/tmpSrc.cpp"
-../src/tmpSrc.cpp: In function ‘int main()’:
-../src/tmpSrc.cpp:42:14: warning: variable ‘tmp2’ set but not used [-Wunused-but-set-variable]
-  configNode* tmp2,*tmp1,*tmp3,*tmp4,*tmp[10];
-              ^
-../src/tmpSrc.cpp:42:32: warning: variable ‘tmp4’ set but not used [-Wunused-but-set-variable]
-  configNode* tmp2,*tmp1,*tmp3,*tmp4,*tmp[10];
-                                ^
-Finished building: ../src/tmpSrc.cpp
+g++ -I"/media/vibhanshu/mydisk/serious/BTP/codes/imp2/graph_aco/include" -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"src/configNode.d" -MT"src/configNode.o" -o "src/configNode.o" "../src/configNode.cpp"
+Finished building: ../src/configNode.cpp
  
 Building target: graph_aco
 Invoking: Cross G++ Linker
@@ -18,5 +11,5 @@ g++  -o "graph_aco"  ./src/ACO.o ./src/Graph.o ./src/commons.o ./src/configGraph
 Finished building target: graph_aco
  
 
-19:06:57 Build Finished (took 468ms)
+19:01:22 Build Finished (took 519ms)
 

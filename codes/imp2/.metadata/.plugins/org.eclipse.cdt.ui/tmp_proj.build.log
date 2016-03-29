@@ -1,6 +1,7 @@
-15:40:36 **** Incremental Build of configuration Debug for project tmp_proj ****
-make all 
-make: Nothing to be done for `all'.
+18:52:01 **** Clean-only build of configuration Debug for project tmp_proj ****
+make clean 
+rm -rf  ./src/first.o  ./src/first.d  tmp_proj
+ 
 
-15:40:36 Build Finished (took 87ms)
+18:52:01 Build Finished (took 63ms)
 

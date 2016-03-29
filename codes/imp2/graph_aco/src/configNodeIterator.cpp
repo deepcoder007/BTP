@@ -63,12 +63,12 @@ bool linkList::isEmpty()
 void linkList::insertNode(configNode* data)
 {
     if( head == NULL ) {
-        head = new Node;
+        head = new Node();
         head->info = data;
         head->prev = head;
         head->next = head;
     } else {
-        Node* tmp = new Node;
+        Node* tmp = new Node();
         tmp->info = data;
         tmp->next = head;
         tmp->prev = head->prev;

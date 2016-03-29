@@ -7,6 +7,8 @@
 
 #include<cmath>
 #include<iostream>
+#include<cstdio>
+#include<cstdlib>
 #include"Graph.h"
 #include"commons.h"
 #include"constants.h"
@@ -101,8 +103,8 @@ set<configNode*> configGraph::getNeighbors(configNode* a) {
 	Graph* gPtr = a->getGraph();
 	int cntNodes = gPtr->cntNodes();   // number of nodes in the graph
 	int arrSize = cntNodes/INT_BIT_SZ+1;
-	int* vPos1 = new int[arrSize];   // Arrays to store the vacant length
-	int* vPos2 = new int[arrSize];
+	int* vPos1 = (int*)calloc(arrSize,sizeof(int)); // Array to store vacant length
+	int* vPos2 = (int*)calloc(arrSize,sizeof(int));
 	vector<int> vTmp;
 	vector<int>::iterator vit;
 	for( i=1 ; i<=cntNodes ; i++ ) {
@@ -114,16 +116,22 @@ set<configNode*> configGraph::getNeighbors(configNode* a) {
 		}
 	}
 
+	cout<<"[configGraph:117] -> start moving the robot "<<endl;
 	// 1. add all the neighboring configurations formed by moving the robot
 	pos = a->getRobotPos();
 	vTmp = gPtr->neighbors(pos);    // neighbors of the robot pos
+	configNode* nodeTmp;
 	for( vit = vTmp.begin() ; vit!=vTmp.end(); vit++ ) {
 		if( a->isVacant(*vit) ) {
 			// if this is vacant , moving robot to this position is a valid neighborhood
-			out.insert( a->robotMove(*vit) );
+			cout<<"[configGraph:123] -> Robot as position : "<<*vit<<endl;
+			nodeTmp = a->robotMove(*vit);
+			if( nodeTmp != NULL )
+				out.insert( nodeTmp );
+			cout<<"[configGraph:126] -> robot movement done : "<<*vit<<endl;
 		}
 	}
-
+	cout<<"[configGraph:127] -> robot movement done obstacle move now " <<endl;
 	// 2. add all the neighboring configurations formed by moving obstacles
 	for( i=1 ; i<=cntNodes ; i++ )  {  // across all the nodes
 		if( !a->isVacant(i) ) {   // if only there is an obstacle
@@ -135,5 +143,6 @@ set<configNode*> configGraph::getNeighbors(configNode* a) {
 			}
 		}
 	}
+	cout<<"[configGraph:139] -> movement done, now returning the neighbors "<<endl;
 	return out;
 }

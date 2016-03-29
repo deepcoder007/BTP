@@ -16,6 +16,7 @@
 #include<vector>
 #include<string>
 #include<set>
+#include<cmath>
 #include"commons.h"
 #include"Graph.h"
 #include"configNodeIterator.h"
@@ -28,40 +29,54 @@ class configNodeNaive;
 
 int main()
 {
-//	genGraph(2,4);
+//	genGraph(8,15);
+//	return 0;
+
+
 	cout<<"Starting program"<<endl;
 	Graph g;
 	g.readGraph("data/graph.dat");
 	configNodeStorageNaive stor(&g);  // the storage struct
-
-	int conf;   // we need only 1 int for this sample config
-	conf += (1<<1);
-	conf += (1<<2);
-	conf += (1<<3);
-//	conf += (1<<4);
-	configNode* tmp2,*tmp1,*tmp3,*tmp4,*tmp[10];
-
-	tmp1 = stor.getConfigNode(&g,1,1,&conf);
-	tmp1 = stor.getConfigNode(&g,1,1,&conf);
-	tmp1 = stor.getConfigNode(&g,1,1,&conf);
-	tmp2 = tmp1->robotMove(4);
-	tmp3 = tmp1->robotMove(3);
-	tmp4 = tmp3->robotMove(2);
-	cout<<"Number of stored nodes : "<<stor.getCount()<<endl;
+	int i,j,k;
 
 	configGraph BigGraph;
+	int cnt = g.cntNodes()/INT_BIT_SZ+1;
+	int cntNodes = g.cntNodes();
+	int* vPos = new int[cnt];
+	memset(vPos,0,sizeof(vPos));
+	// Make all the nodes empty
+	for(i=0;i<=cntNodes;i++)  // for all the nodes
+	{
+		j = i / INT_BIT_SZ;
+		k = i % INT_BIT_SZ;
+		vPos[j] = ( vPos[j] | (1<<k) );
+	}
+
+	configNode* first = stor.getConfigNode(&g,2,cnt,vPos);
+	cout<<"---------------------------------------------------------"<<endl;
+	set<configNode*> st = BigGraph.getNeighbors(first);
+	cout<<"-----------___TMP__END-----------------------------------"<<endl;
+	return 0;
+	set<configNode*> st2,st3;
+	set<configNode*>::iterator it1,it2;
+
+	for( i=0; i<4;i++ )	{
+		// To check the status before this iteration
+		cout<<"-----------------------------------------------------"<<endl;
+		cout<<" => After iteration i : "<<i<<endl;
+		cout<<" => Number of stored nodes : "<<stor.getCount()<<endl;
+		st2.clear();
+		for( it1 = st.begin() ; it1 !=st.end() ; it1++ ) {
+			st3 = BigGraph.getNeighbors(*it1);
+			st2.insert(st3.begin(),st3.end());
+		}
+		st = st2;
+	}
+
+	cout<<"Number of stored nodes : "<<stor.getCount()<<endl;
+
 	set<configNode*> neighbors;
 	set<configNode*>::iterator neighborsIt;
-
-
-//	neighbors = BigGraph.getNeighbors(tmp1);
-	tmp[1]= tmp1;
-	tmp[2]= tmp[1]->robotMove(4);
-	tmp[3]= tmp[1]->robotMove(3);
-	tmp[4]= tmp[3]->robotMove(2);
-	cout<<"Addrs : "<<tmp[1]-tmp1<<" : "<<tmp[2]-tmp1<<" : "<<tmp[3]-tmp1<<" : "<<tmp[4]-tmp1<<endl;
-	tmp[5]= tmp[4]->obsMove(4,3);
-	cout<<" add2 : "<<tmp[5]-tmp1<<endl;
 
 
 	cout<<"-----------Number of stored nodes : "<<stor.getCount()<<endl;

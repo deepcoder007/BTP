@@ -37,7 +37,7 @@ configNodeStorageNaive::configNodeStorageNaive(Graph* g)
     count = 0;
     for( i=0 ; i<HASH_KEY1_SZ ; i++ )
         for( j=0 ; j<HASH_KEY2_SZ ; j++ )
-            dt[i][j]=new linkList;
+            dt[i][j]=new linkList();
 }
 
 configNodeStorageNaive::~configNodeStorageNaive()
@@ -69,24 +69,27 @@ bool configNodeStorageNaive::isGPU()
  */
 configNode* configNodeStorageNaive::getConfigNode(Graph* g,int rPos,int len,int* vPos)
 {
+	cout<<"[configNodeStorage:72] START getConfigNode "<<endl;
     int vVacSum = 0;
     int vacSize = 0;	// number of vacant nodes
-    int* vacArr = new int[g->cntNodes()]; // list of vacancies
+    int* vacArr=(int*)malloc(sizeof(int)*(g->cntNodes()+1));  // list of vacancies
     int i,j;
-    for( i=0 ; i<len ; i++ )
+    for( i=0 ; i<=len ; i++ )
     	for( j=0 ; j<INT_BIT_SZ ; j++ )
     		if( (vPos[i] & (1<<j)) != 0 ) {
     			vVacSum += (i*INT_BIT_SZ+j);
     			vacArr[vacSize++] = (i*INT_BIT_SZ+j);
     		}
+    cout<<"No. of vacant : "<<vacSize<<endl;
     key_ii key(rPos%HASH_KEY1_SZ,vVacSum%HASH_KEY2_SZ);
     linkListIterator tmpList(dt[key.first][key.second]);  // initialize
     configNode* tmpNode;
 
     bool flag;    // for testing the similarity
-
+    cout<<"[configNodeStorage:88] here "<<endl;
     while( tmpList.hasNext() )
     {
+    	cout<<"[configNodeStorage:91] here "<<endl;
     	flag = false;       // if true , then dissimilar
         tmpNode = tmpList.next();
         // now check if tmpNode is having the same conf
@@ -106,10 +109,15 @@ configNode* configNodeStorageNaive::getConfigNode(Graph* g,int rPos,int len,int*
             return tmpNode;
         tmpList.pop();
     }
-    delete[] vacArr;
+    // TODO : Don't know why delete[] or free() command are not working properly
+    // free(vacArr);
 
     // new Node needs to be initialized and update the hash DS
+    cout<<"[configNodeStorage:118] here "<<endl;
+    cout<<"pointers : "<<rPos<<" : "<<len<<" : "<<vPos<<endl;
+
     tmpNode = (configNode*)(new configNodeNaive(g,rPos,len,vPos,this));
+    cout<<"[configNodeStorage: 119] here "<<endl;
     dt[key.first][key.second]->insertNode(tmpNode) ;
     count++; 		 // increment the counter
     return tmpNode;  // return the newly initialized node
