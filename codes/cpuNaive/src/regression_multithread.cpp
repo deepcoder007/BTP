@@ -4,9 +4,11 @@
 #include<unistd.h>
 #include<fstream>
 #include<sstream>
+#include<thread>
 #include"keyValueStore.h"
 #include"Graph.h"
 #include"debug.h"
+#define THD 8
 using namespace std;
 
 // TEST: Generate the graph and print the result
@@ -14,7 +16,7 @@ void test1() {
     cout<<"[START] : test1 "<<endl;
    chdir("src");
    char buf[200];
-   sprintf(buf,"octave --eval \"k=int32(kronecker_generator(%d,%d));k=k';dlmwrite('../data/graph.dat',k);\"",4,5);
+   sprintf(buf,"octave --eval \"k=int32(kronecker_generator(%d,%d));k=k';dlmwrite('../data/graph.dat',k);\"",6,5);
     system(buf);
     chdir("..");
 
@@ -62,8 +64,6 @@ void test3()
     CONF conf;
     conf[0]=54;
     conf[1]=~0;
-    conf[2]=~0;
-    conf[3]=~0;
 
     // place obstacles on some of the nodes
     for( int i=10; i<=30 ; i++ )
@@ -93,39 +93,34 @@ void test3()
     cout<<"[END] : test3 "<<endl;
 }
 
-void writeCONFtoFile(FILE* ptr, Graph* g, CONF conf) {
-   int n = g->getNodeCnt(); 
-   fprintf(ptr,"%d",conf[0]);
-   for(register int i=1 ; i<=n ; i++ ) 
-       if( g->isVacant(conf, i) )
-           fprintf(ptr,",%d",i);
-   fprintf(ptr,"\n");
-   fflush(ptr);
+
+void thread_f(set<CONF> neighbour3, CONF x,Graph* g) {
+    for( auto&y : neighbour3 ) {
+        g->setPhero(x,y,1.0);
+    }
 }
 
 
-// TEST: TEST3 + coloring of nodes with obstacles and robot
+// TEST: a long random walk across the graph and initialize the pheromone along the way
 void test4()
 {
     cout<<"[START]: test4"<<endl;
 
     Graph g;
     g.readFromFile("graph.dat");
-    FILE* ptr = fopen("data/conf.dat","w");
 
     CONF conf;
-    conf[0]=4;
+    conf[0]=54;
     conf[1]=~0;
     conf[2]=~0;
     conf[3]=~0;
 
     // place obstacles on some of the nodes
-    for( int i=10; i<=30 ; i++ )
-        conf = g.unsVac(conf, i);
+//    for( int i=10; i<=30 ; i++ )
+//        conf = g.unsVac(conf, i);
 
     cout<<"Is valid : "<<g.isValid(conf)<<endl;
     printCONF(&g,conf);
-    writeCONFtoFile(ptr,&g,conf);
 
     set<CONF> neighbour1, neighbour2, neighbour3;
     neighbour1 = g.getNeighbour(conf);
@@ -133,19 +128,24 @@ void test4()
     neighbour1.insert(conf);
     while(1) {
         neighbour2 = set<CONF>();
+        vector<thread> thread_set;
         for( auto &x: neighbour1 ) {
-            writeCONFtoFile(ptr,&g,x);
             neighbour3 = g.getNeighbour(x);
-            neighbour2.insert(neighbour3.begin(), neighbour3.end() );  
-            for( auto &y: neighbour3 ) {
-                g.setPhero(x,y,1.0);
+            neighbour2.insert(neighbour3.begin(), neighbour3.end() ); 
+            thread_set.push_back( thread( thread_f, neighbour3, x, &g ) );
+            if( thread_set.size() > THD ) {
+                for( auto it = thread_set.begin() ; it!=thread_set.end() ; it++ ) 
+                    it->join();
+                thread_set.clear();
             }
         }
+        for( auto it = thread_set.begin() ; it!=thread_set.end() ; it++ )
+            it->join();
+        thread_set.clear();
         neighbour1 = neighbour2;
     }
-    fclose(ptr);
 
-    cout<<"[END] : test3 "<<endl;
+    cout<<"[END] : test4 "<<endl;
 }
 
 

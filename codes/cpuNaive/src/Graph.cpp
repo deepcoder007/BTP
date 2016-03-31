@@ -148,6 +148,7 @@ void Graph::readFromFile(string name) {
 /*
     Returns the set of neighbours of the current configuration
     conf -> the configuration for which the neighbors are to be found
+    TODO : optimization possible, currently it is brute force approach
 */
 set<CONF> Graph::getNeighbour(CONF conf) {
     set<CONF> out;   // to be returned 
@@ -230,14 +231,19 @@ bool Graph::isNeighbour(CONF conf1,CONF conf2) {
     Returns the pheromone content of the graph
 */
 float Graph::getPhero(CONF conf1,CONF conf2) {
+    // lock before doing it
+    lock_guard<mutex> lck(phero_mutex);
     PKEY key = storage.getKey(conf1, conf2);
     return storage.getValue(key);
+
 }
 
 /*
     Sets the value of pheromone in the graph
 */
 bool Graph::setPhero(CONF conf1, CONF conf2, float value) {
+    // lock before doing this
+    lock_guard<mutex> lck(phero_mutex);
     PKEY key = storage.getKey(conf1,conf2);
     storage.setValue(key,value);
 }
@@ -247,6 +253,33 @@ bool Graph::setPhero(CONF conf1, CONF conf2, float value) {
 */
 int Graph::getNodeCnt() {
     return n;
+}
+
+/*
+    Mark the node visited
+*/
+void Graph::markVisit(CONF conf) {
+    lock_guard<mutex> lck(tag_mutex);
+    visited.insert(conf);
+}
+
+/*
+    Checks if the node is visited
+*/
+bool Graph::isVisit(CONF conf) {
+    lock_guard<mutex> lck(tag_mutex);
+    if( visited.find(conf) == visited.end() )
+        return false;
+    else
+        return true;
+}
+
+/*
+    Clear the list of visited nodes before start of next ACO iteration
+*/
+void Graph::clearVisit(CONF conf) {
+    lock_guard<mutex> lck(tag_mutex);
+    visited.clear();
 }
 
 /*

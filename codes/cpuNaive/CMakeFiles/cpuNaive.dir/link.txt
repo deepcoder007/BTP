@@ -1,1 +1,0 @@
-/usr/bin/c++   -std=c++11     CMakeFiles/cpuNaive.dir/src/Graph.cpp.o CMakeFiles/cpuNaive.dir/src/keyValueStore.cpp.o CMakeFiles/cpuNaive.dir/src/main.cpp.o  -o bin/cpuNaive -rdynamic 

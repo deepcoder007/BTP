@@ -124,6 +124,19 @@ regression/fast:
 	$(MAKE) -f CMakeFiles/regression.dir/build.make CMakeFiles/regression.dir/build
 .PHONY : regression/fast
 
+#=============================================================================
+# Target rules for targets named regression_multithread
+
+# Build rule for target.
+regression_multithread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 regression_multithread
+.PHONY : regression_multithread
+
+# fast build rule for target.
+regression_multithread/fast:
+	$(MAKE) -f CMakeFiles/regression_multithread.dir/build.make CMakeFiles/regression_multithread.dir/build
+.PHONY : regression_multithread/fast
+
 src/Graph.o: src/Graph.cpp.o
 .PHONY : src/Graph.o
 
@@ -131,6 +144,7 @@ src/Graph.o: src/Graph.cpp.o
 src/Graph.cpp.o:
 	$(MAKE) -f CMakeFiles/CPUNAIVE.dir/build.make CMakeFiles/CPUNAIVE.dir/src/Graph.cpp.o
 	$(MAKE) -f CMakeFiles/regression.dir/build.make CMakeFiles/regression.dir/src/Graph.cpp.o
+	$(MAKE) -f CMakeFiles/regression_multithread.dir/build.make CMakeFiles/regression_multithread.dir/src/Graph.cpp.o
 .PHONY : src/Graph.cpp.o
 
 src/Graph.i: src/Graph.cpp.i
@@ -140,6 +154,7 @@ src/Graph.i: src/Graph.cpp.i
 src/Graph.cpp.i:
 	$(MAKE) -f CMakeFiles/CPUNAIVE.dir/build.make CMakeFiles/CPUNAIVE.dir/src/Graph.cpp.i
 	$(MAKE) -f CMakeFiles/regression.dir/build.make CMakeFiles/regression.dir/src/Graph.cpp.i
+	$(MAKE) -f CMakeFiles/regression_multithread.dir/build.make CMakeFiles/regression_multithread.dir/src/Graph.cpp.i
 .PHONY : src/Graph.cpp.i
 
 src/Graph.s: src/Graph.cpp.s
@@ -149,6 +164,7 @@ src/Graph.s: src/Graph.cpp.s
 src/Graph.cpp.s:
 	$(MAKE) -f CMakeFiles/CPUNAIVE.dir/build.make CMakeFiles/CPUNAIVE.dir/src/Graph.cpp.s
 	$(MAKE) -f CMakeFiles/regression.dir/build.make CMakeFiles/regression.dir/src/Graph.cpp.s
+	$(MAKE) -f CMakeFiles/regression_multithread.dir/build.make CMakeFiles/regression_multithread.dir/src/Graph.cpp.s
 .PHONY : src/Graph.cpp.s
 
 src/debug.o: src/debug.cpp.o
@@ -157,6 +173,7 @@ src/debug.o: src/debug.cpp.o
 # target to build an object file
 src/debug.cpp.o:
 	$(MAKE) -f CMakeFiles/regression.dir/build.make CMakeFiles/regression.dir/src/debug.cpp.o
+	$(MAKE) -f CMakeFiles/regression_multithread.dir/build.make CMakeFiles/regression_multithread.dir/src/debug.cpp.o
 .PHONY : src/debug.cpp.o
 
 src/debug.i: src/debug.cpp.i
@@ -165,6 +182,7 @@ src/debug.i: src/debug.cpp.i
 # target to preprocess a source file
 src/debug.cpp.i:
 	$(MAKE) -f CMakeFiles/regression.dir/build.make CMakeFiles/regression.dir/src/debug.cpp.i
+	$(MAKE) -f CMakeFiles/regression_multithread.dir/build.make CMakeFiles/regression_multithread.dir/src/debug.cpp.i
 .PHONY : src/debug.cpp.i
 
 src/debug.s: src/debug.cpp.s
@@ -173,6 +191,7 @@ src/debug.s: src/debug.cpp.s
 # target to generate assembly for a file
 src/debug.cpp.s:
 	$(MAKE) -f CMakeFiles/regression.dir/build.make CMakeFiles/regression.dir/src/debug.cpp.s
+	$(MAKE) -f CMakeFiles/regression_multithread.dir/build.make CMakeFiles/regression_multithread.dir/src/debug.cpp.s
 .PHONY : src/debug.cpp.s
 
 src/keyValueStore.o: src/keyValueStore.cpp.o
@@ -182,6 +201,7 @@ src/keyValueStore.o: src/keyValueStore.cpp.o
 src/keyValueStore.cpp.o:
 	$(MAKE) -f CMakeFiles/CPUNAIVE.dir/build.make CMakeFiles/CPUNAIVE.dir/src/keyValueStore.cpp.o
 	$(MAKE) -f CMakeFiles/regression.dir/build.make CMakeFiles/regression.dir/src/keyValueStore.cpp.o
+	$(MAKE) -f CMakeFiles/regression_multithread.dir/build.make CMakeFiles/regression_multithread.dir/src/keyValueStore.cpp.o
 .PHONY : src/keyValueStore.cpp.o
 
 src/keyValueStore.i: src/keyValueStore.cpp.i
@@ -191,6 +211,7 @@ src/keyValueStore.i: src/keyValueStore.cpp.i
 src/keyValueStore.cpp.i:
 	$(MAKE) -f CMakeFiles/CPUNAIVE.dir/build.make CMakeFiles/CPUNAIVE.dir/src/keyValueStore.cpp.i
 	$(MAKE) -f CMakeFiles/regression.dir/build.make CMakeFiles/regression.dir/src/keyValueStore.cpp.i
+	$(MAKE) -f CMakeFiles/regression_multithread.dir/build.make CMakeFiles/regression_multithread.dir/src/keyValueStore.cpp.i
 .PHONY : src/keyValueStore.cpp.i
 
 src/keyValueStore.s: src/keyValueStore.cpp.s
@@ -200,6 +221,7 @@ src/keyValueStore.s: src/keyValueStore.cpp.s
 src/keyValueStore.cpp.s:
 	$(MAKE) -f CMakeFiles/CPUNAIVE.dir/build.make CMakeFiles/CPUNAIVE.dir/src/keyValueStore.cpp.s
 	$(MAKE) -f CMakeFiles/regression.dir/build.make CMakeFiles/regression.dir/src/keyValueStore.cpp.s
+	$(MAKE) -f CMakeFiles/regression_multithread.dir/build.make CMakeFiles/regression_multithread.dir/src/keyValueStore.cpp.s
 .PHONY : src/keyValueStore.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -250,6 +272,30 @@ src/regression.cpp.s:
 	$(MAKE) -f CMakeFiles/regression.dir/build.make CMakeFiles/regression.dir/src/regression.cpp.s
 .PHONY : src/regression.cpp.s
 
+src/regression_multithread.o: src/regression_multithread.cpp.o
+.PHONY : src/regression_multithread.o
+
+# target to build an object file
+src/regression_multithread.cpp.o:
+	$(MAKE) -f CMakeFiles/regression_multithread.dir/build.make CMakeFiles/regression_multithread.dir/src/regression_multithread.cpp.o
+.PHONY : src/regression_multithread.cpp.o
+
+src/regression_multithread.i: src/regression_multithread.cpp.i
+.PHONY : src/regression_multithread.i
+
+# target to preprocess a source file
+src/regression_multithread.cpp.i:
+	$(MAKE) -f CMakeFiles/regression_multithread.dir/build.make CMakeFiles/regression_multithread.dir/src/regression_multithread.cpp.i
+.PHONY : src/regression_multithread.cpp.i
+
+src/regression_multithread.s: src/regression_multithread.cpp.s
+.PHONY : src/regression_multithread.s
+
+# target to generate assembly for a file
+src/regression_multithread.cpp.s:
+	$(MAKE) -f CMakeFiles/regression_multithread.dir/build.make CMakeFiles/regression_multithread.dir/src/regression_multithread.cpp.s
+.PHONY : src/regression_multithread.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -260,6 +306,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... regression"
+	@echo "... regression_multithread"
 	@echo "... src/Graph.o"
 	@echo "... src/Graph.i"
 	@echo "... src/Graph.s"
@@ -275,6 +322,9 @@ help:
 	@echo "... src/regression.o"
 	@echo "... src/regression.i"
 	@echo "... src/regression.s"
+	@echo "... src/regression_multithread.o"
+	@echo "... src/regression_multithread.i"
+	@echo "... src/regression_multithread.s"
 .PHONY : help
 
 

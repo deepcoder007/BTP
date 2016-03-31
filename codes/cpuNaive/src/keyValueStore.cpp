@@ -20,7 +20,7 @@ float keyValueStore::getValue(PKEY key) {
     if( phero.find(key) !=phero.end() ) {
         return phero[key];
     } else {
-        return 0.0;    // node node initialized
+        return -1.0;    // node node initialized -> in MMAS it is MAX_VALUE
     }
 }
 

@@ -123,6 +123,41 @@ clean: CMakeFiles/regression.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/regression_multithread.dir
+
+# All Build rule for target.
+CMakeFiles/regression_multithread.dir/all:
+	$(MAKE) -f CMakeFiles/regression_multithread.dir/build.make CMakeFiles/regression_multithread.dir/depend
+	$(MAKE) -f CMakeFiles/regression_multithread.dir/build.make CMakeFiles/regression_multithread.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles  8 9 10 11
+	@echo "Built target regression_multithread"
+.PHONY : CMakeFiles/regression_multithread.dir/all
+
+# Include target in all.
+all: CMakeFiles/regression_multithread.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/regression_multithread.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/regression_multithread.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/vibhanshu/work/serious/BTP/codes/cpuNaive/CMakeFiles 0
+.PHONY : CMakeFiles/regression_multithread.dir/rule
+
+# Convenience name for target.
+regression_multithread: CMakeFiles/regression_multithread.dir/rule
+.PHONY : regression_multithread
+
+# clean rule for target.
+CMakeFiles/regression_multithread.dir/clean:
+	$(MAKE) -f CMakeFiles/regression_multithread.dir/build.make CMakeFiles/regression_multithread.dir/clean
+.PHONY : CMakeFiles/regression_multithread.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/regression_multithread.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

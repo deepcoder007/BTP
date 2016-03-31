@@ -5,6 +5,7 @@
 #include<vector>
 #include<cstring>
 #include<set>
+#include<mutex>
 #include"keyValueStore.h"
 
 /*
@@ -18,6 +19,10 @@ private:
     int n;          // Number of nodes in graph
     int grid[100][100];    // to store the adjacency matrix of underlying graph
     keyValueStore storage;   // to store the pheromone content
+    set<CONF> visited;       // to store the visited configuration nodes
+
+    mutex phero_mutex;       // mutex while accessing the storage structure
+    mutex tag_mutex;         // mutex for tagging the visited nodes
 
     // private functions for manipulation of underlying graph
     bool gAdjacent(int x,int y);
@@ -30,8 +35,11 @@ public:
     float getPhero(CONF conf1,CONF conf2);  // pheromone content of :q
     bool setPhero(CONF conf1,CONF conf2, float value);
     int getNodeCnt();       // returns the number of nodes in the graph
+    void markVisit(CONF conf);
+    bool isVisit(CONF conf);   // checks if the node is visited
+    void clearVisit(CONF conf);   // clear the visited nodes before next iter
 
-    // DONT use these in production
+    // CAUTION: DONT use these in production, violates the thread safety
     CONF setVac(CONF key,int pos);     // set the position vacant
     CONF unsVac(CONF key,int pos);     // unset the position
     bool isValid(CONF key);     // is it a valid configuration 

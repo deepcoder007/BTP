@@ -41,4 +41,5 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/CPUNAIVE.dir/DependInfo.cmake"
   "CMakeFiles/regression.dir/DependInfo.cmake"
+  "CMakeFiles/regression_multithread.dir/DependInfo.cmake"
   )

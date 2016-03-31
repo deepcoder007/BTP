@@ -176,12 +176,6 @@ CPUNAIVE_BINARY_DIR:STATIC=/media/vibhanshu/work/serious/BTP/codes/cpuNaive
 //Value Computed by CMake
 CPUNAIVE_SOURCE_DIR:STATIC=/media/vibhanshu/work/serious/BTP/codes/cpuNaive
 
-//Value Computed by CMake
-cpuNaive_BINARY_DIR:STATIC=/media/vibhanshu/work/serious/BTP/codes/cpuNaive
-
-//Value Computed by CMake
-cpuNaive_SOURCE_DIR:STATIC=/media/vibhanshu/work/serious/BTP/codes/cpuNaive
-
 
 ########################
 # INTERNAL cache entries
